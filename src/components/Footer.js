@@ -2,12 +2,22 @@ import * as React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { memo, navigation, privacy } from "../text/footerText";
+import { sizes, paddings } from "../responsive";
+
+const { tabletLandscape, desktop } = sizes;
 
 const greyColor = "#c4c4c4";
 
 const FooterSC = styled.footer`
   color: ${greyColor};
   background-color: #040e1f;
+  padding: 0 ${paddings.phone}px;
+  ${tabletLandscape} {
+    padding: 0 ${paddings.tabletLandscape}px;
+  }
+  ${desktop} {
+    padding: 0 ${paddings.desktop}px;
+  }
 `;
 
 const NavSectionTitle = styled.h2`
@@ -32,7 +42,21 @@ const NavItem = styled.li`
 `;
 
 const UpperPartSC = styled.div`
-  padding: 42px 15px;
+  padding-top: 42px;
+  ${tabletLandscape} {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+  }
+  ${desktop} {
+    grid-template-columns: 3fr 1fr;
+  }
+`;
+
+const Navigation = styled.nav`
+  ${tabletLandscape} {
+    display: flex;
+    justify-content: space-between;
+  }
 `;
 
 const NavSection = styled.div`
@@ -42,10 +66,6 @@ const NavSection = styled.div`
 `;
 
 const PrivacyNotice = styled.div`
-  padding: 0 15px;
-`;
-
-const PrivacyNoticeInner = styled.div`
   padding: 35px 0;
   text-align: center;
   border-top: 1px solid #222d3d;
@@ -53,14 +73,20 @@ const PrivacyNoticeInner = styled.div`
     font-size: 14px;
     color: #818181;
     text-decoration: none;
+    &:hover {
+      color: white;
+    }
   }
 `;
 
 const SocialsMemo = styled.div`
   p {
-    text-align: center;
     padding: 40px 35px;
+    text-align: center;
     line-height: 26px;
+    ${tabletLandscape} {
+      padding: 0;
+    }
   }
 `;
 
@@ -69,7 +95,7 @@ const Footer = () => {
   return (
     <FooterSC>
       <UpperPartSC>
-        <nav>
+        <Navigation>
           {navigation.map((navSection) => (
             <NavSection>
               <NavSectionTitle>{navSection.heading[lang]}</NavSectionTitle>
@@ -82,18 +108,16 @@ const Footer = () => {
               </ul>
             </NavSection>
           ))}
-        </nav>
+        </Navigation>
+        <SocialsMemo>
+          <p>
+            <span style={{ fontWeight: "bold" }}>Daniel's School </span>
+            {memo[lang]}
+          </p>
+        </SocialsMemo>
       </UpperPartSC>
-      <SocialsMemo>
-        <p>
-          <span style={{ fontWeight: "bold" }}>Daniel's School </span>
-          {memo[lang]}
-        </p>
-      </SocialsMemo>
       <PrivacyNotice>
-        <PrivacyNoticeInner>
           <Link to={"/" + privacy.link}>{privacy[lang]}</Link>
-        </PrivacyNoticeInner>
       </PrivacyNotice>
     </FooterSC>
   );
