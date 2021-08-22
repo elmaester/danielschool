@@ -20,6 +20,7 @@ time, mark, audio, video {
 	border: 0;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
+	color: #040e1f; 
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
