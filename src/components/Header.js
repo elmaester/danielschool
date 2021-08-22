@@ -1,8 +1,10 @@
 import * as React from "react";
 import styled from "styled-components";
+import GlobalContext from "../global-context";
 import Logo from "../images/logo.svg";
 import Menu from "../images/Menu_icon.svg";
 import { paddings } from "../responsive";
+import LanguageSwitcher from "./LanguageSwitcher";
 
 const HeaderSC = styled.header`
   padding: 11px ${paddings.phone}px;
@@ -24,15 +26,18 @@ const MenuContainerSC = styled.div`
   max-width: 22px;
 `;
 
-const Header = () => (
-  <HeaderSC>
-    <LogoContainerSC>
-      <Logo />
-    </LogoContainerSC>
-    <MenuContainerSC>
-      <Menu />
-    </MenuContainerSC>
-  </HeaderSC>
-);
+const Header = () => {
+  return (
+    <HeaderSC>
+      <LogoContainerSC>
+        <Logo />
+      </LogoContainerSC>
+      <LanguageSwitcher />
+      <MenuContainerSC>
+        <Menu />
+      </MenuContainerSC>
+    </HeaderSC>
+  );
+};
 
 export default Header;

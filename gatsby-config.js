@@ -23,19 +23,14 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-manifest`,
+      resolve: `gatsby-plugin-sharp`,
       options: {
-        name: `Daniel School`,
-        short_name: `Daniel School`,
-        start_url: `/`,
-        display: `standalone`,
         icon: 'src/images/favicon.svg'
       },
     },
     "gatsby-plugin-react-svg",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
-    "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
       resolve: "gatsby-source-filesystem",

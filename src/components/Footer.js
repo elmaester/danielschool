@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import { memo, navigation, privacy } from "../text/footerText";
 import { sizes, paddings } from "../responsive";
+import GlobalContext from "../global-context";
 
 const { tabletLandscape, desktop } = sizes;
 
@@ -91,17 +92,17 @@ const SocialsMemo = styled.div`
 `;
 
 const Footer = () => {
-  const lang = "uk";
+  const {lang} = React.useContext(GlobalContext);
   return (
     <FooterSC>
       <UpperPartSC>
         <Navigation>
           {navigation.map((navSection) => (
-            <NavSection>
+            <NavSection key={navSection.heading[lang]}>
               <NavSectionTitle>{navSection.heading[lang]}</NavSectionTitle>
               <ul>
                 {navSection.items.map((navItem) => (
-                  <NavItem>
+                  <NavItem key={navItem[lang]}>
                     <Link to={"/" + navItem.link}>{navItem[lang]}</Link>
                   </NavItem>
                 ))}
@@ -117,7 +118,7 @@ const Footer = () => {
         </SocialsMemo>
       </UpperPartSC>
       <PrivacyNotice>
-          <Link to={"/" + privacy.link}>{privacy[lang]}</Link>
+        <Link to={"/" + privacy.link}>{privacy[lang]}</Link>
       </PrivacyNotice>
     </FooterSC>
   );
