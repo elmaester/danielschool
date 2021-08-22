@@ -32,6 +32,7 @@ module.exports = {
         icon: 'src/images/favicon.svg'
       },
     },
+    "gatsby-plugin-react-svg",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
     "gatsby-plugin-sharp",
