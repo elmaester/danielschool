@@ -1,9 +1,8 @@
 import * as React from "react";
 import styled from "styled-components";
-import GlobalContext from "../global-context";
 import Logo from "../images/logo.svg";
 import Menu from "../images/Menu_icon.svg";
-import { paddings } from "../responsive";
+import { paddings, sizes } from "../responsive";
 import LanguageSwitcher from "./LanguageSwitcher";
 
 const HeaderSC = styled.header`
@@ -26,17 +25,42 @@ const MenuContainerSC = styled.div`
   max-width: 22px;
 `;
 
+const LanguageSwitcherOutsideSC = styled.div`
+  padding: 10px ${paddings.phone}px 8.4px ${paddings.phone}px;
+  display: flex;
+  justify-content: flex-end;
+  ${sizes.tablet} {
+    display: none;
+  }
+`;
+
+const LanguageSwitcherInsideSC = styled.div`
+  display: none;
+  ${sizes.tablet} {
+    display: block;
+    margin-left: auto;
+    margin-right: 41px;
+  }
+`;
+
 const Header = () => {
   return (
-    <HeaderSC>
-      <LogoContainerSC>
-        <Logo />
-      </LogoContainerSC>
-      <LanguageSwitcher />
-      <MenuContainerSC>
-        <Menu />
-      </MenuContainerSC>
-    </HeaderSC>
+    <>
+      <HeaderSC>
+        <LogoContainerSC>
+          <Logo />
+        </LogoContainerSC>
+        <LanguageSwitcherInsideSC>
+          <LanguageSwitcher />
+        </LanguageSwitcherInsideSC>
+        <MenuContainerSC>
+          <Menu />
+        </MenuContainerSC>
+      </HeaderSC>
+      <LanguageSwitcherOutsideSC>
+        <LanguageSwitcher />
+      </LanguageSwitcherOutsideSC>
+    </>
   );
 };
 
