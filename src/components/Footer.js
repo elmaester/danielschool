@@ -33,8 +33,6 @@ const NavItem = styled.li`
   }
   a {
     padding: 2px 0;
-    text-decoration: none;
-    color: ${greyColor};
     &:hover {
       border-bottom: 1px solid #de1a3e;
       color: white;
@@ -73,7 +71,6 @@ const PrivacyNotice = styled.div`
   a {
     font-size: 14px;
     color: #818181;
-    text-decoration: none;
     &:hover {
       color: white;
     }

@@ -1,33 +1,48 @@
+import * as React from 'react';
+
+import GroupClassesIcon from "../images/team.svg";
+import PersonalLessonsIcon from "../images/user.svg";
+import GroupSchoolIcon from "../images/knowledge.svg";
+import OnlineWeekendIcon from "../images/job-interview.svg";
+import OtherLanguagesIcon from "../images/linguistics.svg";
+import OnlineTestingIcon from "../images/exam.svg";
+
 export const services = [
   {
     uk: "Групові заняття для дорослих",
     en: "Group classes for adults",
-    iconName: "team",
+    icon: () => <GroupClassesIcon />,
+    link: "group-classes-adults",
   },
   {
     uk: "Індивідуальні уроки",
     en: "Personal lessons",
-    iconName: "user",
+    icon: () => <PersonalLessonsIcon />,
+    link: "personal-lessons",
   },
   {
     uk: "Групові заняття для школярів",
     en: "Group classes for school students",
-    iconName: "knowledge",
+    icon: () => <GroupSchoolIcon />,
+    link: "group-classes-school",
   },
   {
     uk: "Курси вихідного дня онлайн",
     en: "Online weekend courses",
-    iconName: "job-interview",
+    icon: () => <OnlineWeekendIcon />,
+    link: "online-weekend",
   },
   {
     uk: "Курси іспанської, румунської, польської мов",
     en: "Spanish, Romanian and Polish courses",
-    iconName: "linguistics",
+    icon: () => <OtherLanguagesIcon />,
+    link: "other-languages",
   },
   {
     uk: "Тестування Online",
     en: "Online testing",
-    iconName: "exam",
+    icon: () => <OnlineTestingIcon />,
+    link: "online-test",
   },
 ];
 

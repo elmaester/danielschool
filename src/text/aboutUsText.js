@@ -19,6 +19,6 @@ export const paragraphs = [
   },
   {
     uk: "Окрім англійської мови, ми пропонуємо вивчення іспанської, польської, румунської та французької мов.",
-    en: "Apart from English we also offer tutoring in Spanish, Polish, Romanian and French.",
+    en: "Apart from English we also offer Spanish, Polish, Romanian and French classes.",
   },
 ];

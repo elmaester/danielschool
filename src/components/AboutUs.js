@@ -57,7 +57,7 @@ const AboutUs = () => {
       <h2>{heading[lang]}</h2>
       <FlexContainerSC>
         <DanielImageContainerSC>
-          <StaticImage src="../images/Daniel.jpg" />
+          <StaticImage src="../images/Daniel.jpg" alt="Daniel Hayden" />
         </DanielImageContainerSC>
         <ParagraphsContainerSC>
           {paragraphs.map((paragraph, index) => (
