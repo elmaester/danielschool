@@ -25,7 +25,6 @@ const NavArrowSC = styled.div`
   font-size: 36px;
   font-weight: bold;
   color: #a1a9b0;
-  cursor: pointer;
   transform: scaleY(3) translateY(-12px);
   &.Reasons__arrow-active {
     color: ${blueColor};

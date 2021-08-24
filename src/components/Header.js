@@ -5,11 +5,12 @@ import Menu from "../images/Menu_icon.svg";
 import { paddings, sizes } from "../responsive";
 import LanguageSwitcher from "./LanguageSwitcher";
 
-const HeaderSC = styled.header`
+const HeaderSC = styled.div`
   padding: 11px ${paddings.phone}px;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: white;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
 `;
 
@@ -26,7 +27,7 @@ const MenuContainerSC = styled.div`
 `;
 
 const LanguageSwitcherOutsideSC = styled.div`
-  padding: 10px ${paddings.phone}px 8.4px ${paddings.phone}px;
+  padding: 10px ${paddings.phone}px 8.4px;
   display: flex;
   justify-content: flex-end;
   ${sizes.tablet} {
@@ -43,23 +44,37 @@ const LanguageSwitcherInsideSC = styled.div`
   }
 `;
 
+const HeaderOuterContainerSC = styled.header`
+  position: fixed;
+  width: 100%;
+  background-color: transparent;
+  z-index: 100;
+`;
+
+const FixedPositionSpacerSC = styled.div`
+  min-height: 94px;
+`;
+
 const Header = () => {
   return (
     <>
-      <HeaderSC>
-        <LogoContainerSC>
-          <Logo />
-        </LogoContainerSC>
-        <LanguageSwitcherInsideSC>
+      <HeaderOuterContainerSC>
+        <HeaderSC>
+          <LogoContainerSC>
+            <Logo />
+          </LogoContainerSC>
+          <LanguageSwitcherInsideSC>
+            <LanguageSwitcher />
+          </LanguageSwitcherInsideSC>
+          <MenuContainerSC>
+            <Menu />
+          </MenuContainerSC>
+        </HeaderSC>
+        <LanguageSwitcherOutsideSC>
           <LanguageSwitcher />
-        </LanguageSwitcherInsideSC>
-        <MenuContainerSC>
-          <Menu />
-        </MenuContainerSC>
-      </HeaderSC>
-      <LanguageSwitcherOutsideSC>
-        <LanguageSwitcher />
-      </LanguageSwitcherOutsideSC>
+        </LanguageSwitcherOutsideSC>
+      </HeaderOuterContainerSC>
+      <FixedPositionSpacerSC />
     </>
   );
 };
