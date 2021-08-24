@@ -61,6 +61,11 @@ export const navigation = [
         en: 'Polish',
         link: 'polish',
       },
+      {
+        uk: 'Французька',
+        en: 'French',
+        link: 'french',
+      },
     ],
   },
   {

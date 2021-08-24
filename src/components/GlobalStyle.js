@@ -50,6 +50,10 @@ a {
 	text-decoration: none;
 	color: inherit;
 }
+
+h2 {
+	font-size: 24px;
+}
 `;
 
 const GlobalStyle = ({ children }) => (

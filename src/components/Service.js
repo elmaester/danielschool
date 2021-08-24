@@ -11,10 +11,12 @@ const ServiceSC = styled.div`
   max-height: 150px;
   padding-top: 20px;
   box-sizing: border-box;
-  width: 290px;
-  max-width: 290px;
   box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.15);
   margin: 0 auto 10px;
+  @media(min-width: 320px) {
+    width: 290px;
+    max-width: 290px;
+  }
   ${sizes.tablet} {
     margin-bottom: 20px;
   }
@@ -36,9 +38,6 @@ const InnerContainerSC = styled.div`
   align-items: center;
   height: 105px;
   max-height: 105px;
-  h2 {
-    font-size: 24px;
-  }
 `;
 
 const LinkContainerSC = styled.div`

@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
 import { memo, navigation, privacy } from "../text/footerText";
-import { sizes, paddings } from "../responsive";
+import { sizes, paddings, blackColor } from "../responsive";
 import GlobalContext from "../global-context";
 
 const { tabletLandscape, desktop } = sizes;
@@ -11,7 +11,7 @@ const greyColor = "#c4c4c4";
 
 const FooterSC = styled.footer`
   color: ${greyColor};
-  background-color: #040e1f;
+  background-color: ${blackColor};
   padding: 0 ${paddings.phone}px;
   ${tabletLandscape} {
     padding: 0 ${paddings.tabletLandscape}px;
@@ -22,7 +22,6 @@ const FooterSC = styled.footer`
 `;
 
 const NavSectionTitle = styled.h2`
-  font-size: 24px;
   color: white;
   margin-bottom: 28px;
 `;

@@ -1,0 +1,45 @@
+.SignUp__PhoneInput__input,
+.multiSelectContainer {
+  display: block;
+  width: 100%;
+  border: 2px solid white;
+  margin-top: 30px;
+  padding: 10px 7px;
+  box-sizing: border-box;
+  background-color: #040e1f;
+  color: white;
+  outline: none;
+}
+.SignUp__PhoneInput__input::placeholder,
+.multiSelectContainer input::placeholder {
+  color: white;
+  font-size: 14px;
+  line-height: 26px;
+}
+@media (min-width: 600px) {
+  .SignUp__PhoneInput__input,
+  .multiSelectContainer {
+    width: 360px !important;
+    margin-left: auto;
+  }
+}
+.multiSelectContainer .searchWrapper {
+  border: none;
+  padding: 0;
+}
+.multiSelectContainer .chip {
+  background-color: #040e1f;
+  border: 1px solid white;
+}
+.multiSelectContainer li {
+  background-color: #040e1f;
+}
+.multiSelectContainer li:hover {
+  background-color: #2b5adc !important;
+}
+.multiSelectContainer .searchBox {
+  color: white;
+}
+.SignUp__PhoneInput__container .special-label {
+  display: none;
+}

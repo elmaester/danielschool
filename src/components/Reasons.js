@@ -18,7 +18,6 @@ const ReasonsSC = styled.section`
   }
   h2 {
     margin: 50px 0 45px;
-    font-size: 24px;
   }
 `;
 
@@ -26,7 +25,8 @@ const NavArrowSC = styled.div`
   font-size: 36px;
   font-weight: bold;
   color: #a1a9b0;
-  transform: scaleY(3) translateY(-5px);
+  cursor: pointer;
+  transform: scaleY(3) translateY(-12px);
   &.Reasons__arrow-active {
     color: ${blueColor};
   }

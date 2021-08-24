@@ -15,7 +15,6 @@ const AboutUsSC = styled.section`
     padding: 0 ${paddings.desktop}px;
   }
   h2 {
-    font-size: 24px;
     text-align: center;
     margin-bottom: 35px;
   }

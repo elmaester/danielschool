@@ -13,3 +13,4 @@ export const paddings = {
 };
 
 export const blueColor = "#2b5adc";
+export const blackColor = "#040e1f";

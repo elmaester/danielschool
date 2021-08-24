@@ -1,11 +1,11 @@
 export const heading = {
-  uk: "5 речей чому вам потрібно обрати нас",
+  uk: "5 причин, чому ви повинні обрати саме нас",
   en: "5 reasons to choose us",
 };
 
 export const reasons = [
   {
-    uk: "Творча, талановита команда кваліфікованих викладачів",
+    uk: "Творча талановита команда кваліфікованих викладачів",
     en: "A creative, talented team of qualified teachers",
   },
   {
