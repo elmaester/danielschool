@@ -56,18 +56,21 @@ const LeftSide = styled.div`
     }
   }
   button {
-    background-color: ${blueColor};
-    padding: 18px 25px;
-    border-radius: 100px;
-    border: none;
-    color: white;
-    display: inline-block;
     margin: 0 auto;
-    font-weight: bold;
     ${sizes.tablet} {
       margin: 0;
     }
   }
+`;
+
+export const SignUpButtonSC = styled.button`
+  background-color: ${blueColor};
+  padding: 18px 25px;
+  border-radius: 100px;
+  border: none;
+  color: white;
+  display: inline-block;
+  font-weight: bold;
 `;
 
 const RightSide = styled.div`
@@ -101,11 +104,14 @@ const CarouselItem = ({ item, imageData }) => {
       <LeftSide>
         <h2>{item.heading[lang]}</h2>
         <p>{item.subtext[lang]}</p>
-        <button>{signUpButtonText[lang]}</button>
+        <SignUpButtonSC>{signUpButtonText[lang]}</SignUpButtonSC>
       </LeftSide>
       <RightSide>
         <h3>Daniel's School</h3>
-        <p>{motto.partOne[lang]}{motto.partTwo[lang]}</p>
+        <p>
+          {motto.partOne[lang]}
+          {motto.partTwo[lang]}
+        </p>
       </RightSide>
     </CarouselItemSC>
   );

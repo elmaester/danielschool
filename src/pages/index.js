@@ -1,5 +1,6 @@
 import * as React from "react";
 import AboutUs from "../components/AboutUs";
+import AutumnSignUp from "../components/AutumnSignUp";
 import BannerCarousel from "../components/BannerCarousel";
 import Contacts from "../components/Contacts";
 import Footer from "../components/Footer";
@@ -17,6 +18,7 @@ const IndexPage = () => (
     <Reasons />
     <Services />
     <MottoFlag />
+    <AutumnSignUp />
     <AboutUs />
     <SignUp />
     <Contacts />

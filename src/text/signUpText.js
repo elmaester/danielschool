@@ -40,3 +40,8 @@ export const sendButton = {
   uk: "Відправити заявку",
   en: "Submit application",
 };
+
+export const signUpAutumn = {
+  uk: "Набір на осінні курси англійської мови",
+  en: "Signup for the autumn English course is in progress",
+};

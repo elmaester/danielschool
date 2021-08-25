@@ -40,7 +40,7 @@ const InnerContainerSC = styled.div`
   max-height: 105px;
 `;
 
-const LinkContainerSC = styled.div`
+export const LinkContainerSC = styled.div`
   text-align: right;
   margin-top: auto;
 `;
@@ -52,7 +52,7 @@ const IconContainerSC = styled.div`
   margin: 0 13px;
 `;
 
-const ArrowSC = styled.span`
+export const ArrowSC = styled.span`
   color: ${redColor};
   display: inline-block;
   font-weight: bold;
