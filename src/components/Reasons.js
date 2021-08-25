@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import GlobalContext from "../global-context";
-import { blueColor, paddings, sizes } from "../responsive";
+import { blueColor, grayColor, paddings, sizes } from "../responsive";
 import { heading, reasons } from "../text/reasonsText";
 import Reason from "./Reason";
 
@@ -24,7 +24,7 @@ const ReasonsSC = styled.section`
 const NavArrowSC = styled.div`
   font-size: 36px;
   font-weight: bold;
-  color: #a1a9b0;
+  color: ${grayColor};
   transform: scaleY(3) translateY(-12px);
   &.Reasons__arrow-active {
     color: ${blueColor};

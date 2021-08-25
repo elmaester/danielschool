@@ -1,13 +1,13 @@
 import * as React from "react";
 import styled from "styled-components";
 import GlobalContext from "../global-context";
-import { sizes } from "../responsive";
+import { grayColor, sizes } from "../responsive";
 
 const LanguageSwitcherSC = styled.div`
-  color: #a1a9b0;
+  color: ${grayColor};
   background-color: white;
   span {
-    color: #a1a9b0;
+    color: ${grayColor};
     &.LanguageSwitcher__active-lang {
       color: #040e1f;
       cursor: default;

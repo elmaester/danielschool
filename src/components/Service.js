@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Link } from "gatsby";
 import GlobalContext from "../global-context";
 import { more } from "../text/servicesText";
-import { sizes } from "../responsive";
+import { redColor, sizes } from "../responsive";
 
 const ServiceSC = styled.div`
   background-color: white;
@@ -53,7 +53,7 @@ const IconContainerSC = styled.div`
 `;
 
 const ArrowSC = styled.span`
-  color: #dd1d2f;
+  color: ${redColor};
   display: inline-block;
   font-weight: bold;
   transform: translateY(-2.5px) scaleY(1.5);

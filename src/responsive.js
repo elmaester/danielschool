@@ -12,5 +12,8 @@ export const paddings = {
   desktop: 165,
 };
 
-export const blueColor = "#2b5adc";
 export const blackColor = "#040e1f";
+export const blueColor = "#2b5adc";
+export const grayColor = "#a1a9b0";
+export const lightGrayColor = "#d6dadb";
+export const redColor = "#e6244b";

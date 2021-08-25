@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import GlobalContext from "../global-context";
-import { blueColor, sizes } from "../responsive";
+import { blueColor, lightGrayColor, sizes } from "../responsive";
 
 const ReasonSC = styled.div`
   display: none;
@@ -47,7 +47,7 @@ const CircleSC = styled.div`
   ${largerCircleSize};
   margin: 0 auto;
   border-radius: 50%;
-  border: 2px solid #d6dadb;
+  border: 2px solid ${lightGrayColor};
   color: ${blueColor};
   display: flex;
   justify-content: center;

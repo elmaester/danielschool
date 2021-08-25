@@ -19,7 +19,7 @@ const getMatchingImage = (id, data) =>
 
 const BannerCarousel = () => {
   const data = useStaticQuery(graphql`
-    query MyQuery {
+    query CarouselImagesQuery {
       allFile(
         filter: {
           base: { regex: "/637186963|1448137991|308787692|1186037383/" }

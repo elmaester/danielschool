@@ -8,7 +8,7 @@ export const items = [
       uk: "Професійні викладачі та носії мови з США та Британії",
       en: "Professional teachers and native speakers from the USA and the UK",
     },
-    imageID: "637186963"
+    imageID: "637186963",
   },
   {
     heading: {
@@ -19,7 +19,7 @@ export const items = [
       uk: "Групи від 4 до 8 дітей",
       en: "4 to 8 kids per group",
     },
-    imageID: "1448137991"
+    imageID: "1448137991",
   },
   {
     heading: {
@@ -30,7 +30,7 @@ export const items = [
       uk: "Групи від 4 до 8 людей",
       en: "4 to 8 students per group",
     },
-    imageID: "308787692"
+    imageID: "308787692",
   },
   {
     heading: {
@@ -41,7 +41,7 @@ export const items = [
       uk: "Групи від 4 до 8 людей",
       en: "4 to 8 students per group",
     },
-    imageID: "1186037383"
+    imageID: "1186037383",
   },
 ];
 
@@ -51,6 +51,12 @@ export const signUpButtonText = {
 };
 
 export const motto = {
-  uk: "Вчись легко - Говори вільно!",
-  en: "Learn easily, speak fluently!",
-}
+  partOne: {
+    uk: "Вчись легко - ",
+    en: "Learn easily, ",
+  },
+  partTwo: {
+    uk: "Говори вільно!",
+    en: "speak fluently!",
+  },
+};

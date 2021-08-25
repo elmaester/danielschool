@@ -4,7 +4,7 @@ import PhoneInput from "react-phone-input-2";
 import Multiselect from "multiselect-react-dropdown";
 import "./SignUp__InputStyles.css";
 import GlobalContext from "../global-context";
-import { blackColor, paddings, sizes } from "../responsive";
+import { blackColor, paddings, redColor, sizes } from "../responsive";
 import {
   heading,
   languageChoice,
@@ -42,7 +42,7 @@ const FormInputSC = styled.input`
 `;
 
 const SendButtonSC = styled.button`
-  background-color: #dd1d3f;
+  background-color: ${redColor};
   color: white;
   outline: none;
   border: none;

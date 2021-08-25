@@ -105,7 +105,7 @@ const CarouselItem = ({ item, imageData }) => {
       </LeftSide>
       <RightSide>
         <h3>Daniel's School</h3>
-        <p>{motto[lang]}</p>
+        <p>{motto.partOne[lang]}{motto.partTwo[lang]}</p>
       </RightSide>
     </CarouselItemSC>
   );
