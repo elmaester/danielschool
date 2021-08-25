@@ -1,5 +1,6 @@
 import * as React from "react";
 import AboutUs from "../components/AboutUs";
+import BannerCarousel from "../components/BannerCarousel";
 import Contacts from "../components/Contacts";
 import Footer from "../components/Footer";
 import GlobalStyle from "../components/GlobalStyle";
@@ -11,6 +12,7 @@ import SignUp from "../components/SignUp";
 const IndexPage = () => (
   <GlobalStyle>
     <Header />
+    <BannerCarousel />
     <Reasons />
     <Services />
     <AboutUs />
