@@ -46,8 +46,8 @@ export const items = [
 ];
 
 export const signUpButtonText = {
-  uk: "записатись",
-  en: "sign up",
+  uk: "Записатись",
+  en: "Sign up",
 };
 
 export const motto = {

@@ -3,11 +3,14 @@ import * as React from "react";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styled from "styled-components";
+import { sizes } from "../responsive";
 import { items } from "../text/carouselItemsText";
 import CarouselItem from "./CarouselItem";
 
 const BannerCarouselSC = styled.section`
-  margin-top: 50px;
+  ${sizes.phone} {
+    margin-top: 30px;
+  }
 `;
 
 const getMatchingImage = (id, data) =>
@@ -25,7 +28,18 @@ const BannerCarousel = () => {
         edges {
           node {
             childImageSharp {
-              gatsbyImageData(transformOptions: {fit: COVER}, quality: 60, width: 1920)
+              gatsbyImageData(
+                transformOptions: {
+                  fit: COVER
+                  duotone: {
+                    opacity: 40
+                    shadow: "#040e1f"
+                    highlight: "#040e1f"
+                  }
+                }
+                quality: 70
+                placeholder: BLURRED
+              )
             }
             base
           }
@@ -37,10 +51,9 @@ const BannerCarousel = () => {
     <BannerCarouselSC>
       <Carousel
         autoPlay
-        interval={3000}
-        showThumbs={false}
+        interval={5000}
         infiniteLoop
-        showIndicators={true}
+        showThumbs={false}
         showStatus={false}
         showArrows={false}
       >
