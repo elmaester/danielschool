@@ -4,7 +4,7 @@ import { convertToBgImage } from "gbimage-bridge";
 import * as React from "react";
 import styled from "styled-components";
 import GlobalContext from "../global-context";
-import { blueColor, grayColor, redColor, sizes } from "../responsive";
+import { blueColor, redColor, sizes } from "../responsive";
 import { motto } from "../text/carouselItemsText";
 
 const MottoFlagSC = styled(BackgroundImage)`

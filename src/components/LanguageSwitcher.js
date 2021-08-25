@@ -6,8 +6,12 @@ import { grayColor, sizes } from "../responsive";
 const LanguageSwitcherSC = styled.div`
   color: ${grayColor};
   background-color: white;
-  span {
+  padding: 1px;
+  button {
     color: ${grayColor};
+    background-color: inherit;
+    border: none;
+    padding: 0;
     &.LanguageSwitcher__active-lang {
       color: #040e1f;
       cursor: default;
@@ -22,19 +26,19 @@ const LanguageSwitcher = () => {
   const { lang, setLanguage } = React.useContext(GlobalContext);
   return (
     <LanguageSwitcherSC>
-      <span
+      <button
         className={lang === "uk" ? "LanguageSwitcher__active-lang" : undefined}
         onClick={() => setLanguage("uk")}
       >
         UA
-      </span>{" "}
+      </button>{" "}
       |{" "}
-      <span
+      <button
         className={lang === "en" ? "LanguageSwitcher__active-lang" : undefined}
         onClick={() => setLanguage("en")}
       >
         EN
-      </span>
+      </button>
     </LanguageSwitcherSC>
   );
 };
