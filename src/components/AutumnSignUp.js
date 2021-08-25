@@ -27,7 +27,9 @@ const AutumnSignUpSC = styled.section`
   }
 `;
 
-const ImageContainerSC = styled.div``;
+const ImageContainerSC = styled.div`
+  max-width: 600px;
+`;
 
 const ActionSectionSC = styled.div`
   display: flex;
@@ -67,6 +69,7 @@ const AutumnSignUp = () => {
             transformOptions: { fit: COVER }
             quality: 70
             placeholder: BLURRED
+            width: 600
           )
         }
         base
@@ -74,18 +77,23 @@ const AutumnSignUp = () => {
     }
   `);
   const { lang } = React.useContext(GlobalContext);
-  return <AutumnSignUpSC>
-    <ImageContainerSC>
-      <GatsbyImage image={data.file.childImageSharp.gatsbyImageData} alt="students" />
-    </ImageContainerSC>
-    <ActionSectionSC>
-      <h2>{signUpAutumn[lang]}</h2>
-      <SignUpButtonSC>{signUpButtonText[lang]}</SignUpButtonSC>
-        <Link style={{textAlign: "right"}}>
+  return (
+    <AutumnSignUpSC>
+      <ImageContainerSC>
+        <GatsbyImage
+          image={data.file.childImageSharp.gatsbyImageData}
+          alt="students"
+        />
+      </ImageContainerSC>
+      <ActionSectionSC>
+        <h2>{signUpAutumn[lang]}</h2>
+        <SignUpButtonSC>{signUpButtonText[lang]}</SignUpButtonSC>
+        <Link style={{ textAlign: "right" }}>
           {more[lang]} <ArrowSC>→</ArrowSC>
         </Link>
-    </ActionSectionSC>
-  </AutumnSignUpSC>;
+      </ActionSectionSC>
+    </AutumnSignUpSC>
+  );
 };
 
 export default AutumnSignUp;
