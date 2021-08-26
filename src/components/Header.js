@@ -1,7 +1,9 @@
 import * as React from "react";
 import styled from "styled-components";
 import Logo from "../images/logo.svg";
-import Menu from "../images/Menu_icon.svg";
+import Menu from "./Menu";
+import MenuIcon from "../images/Menu.svg";
+import MenuCloseIcon from "../images/Close.svg";
 import { paddings, sizes } from "../responsive";
 import LanguageSwitcher from "./LanguageSwitcher";
 
@@ -24,6 +26,9 @@ const MenuContainerSC = styled.div`
   width: 22px;
   min-width: 22px;
   max-width: 22px;
+  ${sizes.desktop} {
+    cursor: pointer;
+  }
 `;
 
 const LanguageSwitcherOutsideSC = styled.div`
@@ -56,6 +61,7 @@ const FixedPositionSpacerSC = styled.div`
 `;
 
 const Header = () => {
+  const [menuShown, setMenuShown] = React.useState(false);
   return (
     <>
       <HeaderOuterContainerSC>
@@ -67,7 +73,11 @@ const Header = () => {
             <LanguageSwitcher />
           </LanguageSwitcherInsideSC>
           <MenuContainerSC>
-            <Menu />
+            {menuShown ? (
+              <MenuCloseIcon onClick={() => setMenuShown(false)} />
+            ) : (
+              <MenuIcon onClick={() => setMenuShown(true)} />
+            )}
           </MenuContainerSC>
         </HeaderSC>
         <LanguageSwitcherOutsideSC>
@@ -75,6 +85,7 @@ const Header = () => {
         </LanguageSwitcherOutsideSC>
       </HeaderOuterContainerSC>
       <FixedPositionSpacerSC />
+      {menuShown && <Menu closeMenuFunc={() => setMenuShown(false)} />}
     </>
   );
 };

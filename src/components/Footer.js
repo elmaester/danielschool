@@ -21,12 +21,12 @@ const FooterSC = styled.footer`
   }
 `;
 
-const NavSectionTitle = styled.h2`
+const NavSectionTitleSC = styled.h2`
   color: white;
   margin-bottom: 28px;
 `;
 
-const NavItem = styled.li`
+const NavItemSC = styled.li`
   &:not(:last-of-type) {
     margin-bottom: 20px;
   }
@@ -50,14 +50,14 @@ const UpperPartSC = styled.div`
   }
 `;
 
-const Navigation = styled.nav`
+const NavigationSC = styled.nav`
   ${tabletLandscape} {
     display: flex;
     justify-content: space-between;
   }
 `;
 
-const NavSection = styled.div`
+const NavSectionSC = styled.div`
   &:not(:last-of-type) {
     margin-bottom: 42px;
   }
@@ -92,20 +92,20 @@ const Footer = () => {
   return (
     <FooterSC>
       <UpperPartSC>
-        <Navigation>
+        <NavigationSC>
           {navigation.map((navSection) => (
-            <NavSection key={navSection.heading[lang]}>
-              <NavSectionTitle>{navSection.heading[lang]}</NavSectionTitle>
+            <NavSectionSC key={navSection.heading[lang]}>
+              <NavSectionTitleSC>{navSection.heading[lang]}</NavSectionTitleSC>
               <ul>
                 {navSection.items.map((navItem) => (
-                  <NavItem key={navItem[lang]}>
+                  <NavItemSC key={navItem[lang]}>
                     <Link to={"/" + navItem.link}>{navItem[lang]}</Link>
-                  </NavItem>
+                  </NavItemSC>
                 ))}
               </ul>
-            </NavSection>
+            </NavSectionSC>
           ))}
-        </Navigation>
+        </NavigationSC>
         <SocialsMemo>
           <p>
             <span style={{ fontWeight: "bold" }}>Daniel's School </span>
