@@ -1,8 +1,3 @@
-export const signUpWord = {
-  uk: "Записатись",
-  en: "",
-};
-
 export const descriptionWord = {
   uk: "Опис",
   en: "",

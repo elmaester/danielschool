@@ -47,14 +47,16 @@ const FeaturesList = ({ featuresList }) => {
   return (
     <FeaturesListSC>
       {featuresList.map((feature, index) => (
-        <FeatureSC>
+        <FeatureSC key={index}>
           <NumberDashSC>{"0" + (index + 1)}</NumberDashSC>
           <NumberDashSC>{" — "}</NumberDashSC>
           <RightSideContainerSC>
             <TitleSC>{feature.title[lang]}</TitleSC>
             <SublinesContainerSC>
               {!!feature.sublines.length &&
-                feature.sublines.map((subline) => <p>{subline[lang]}</p>)}
+                feature.sublines.map((subline, index) => (
+                  <p key={index}>{subline[lang]}</p>
+                ))}
             </SublinesContainerSC>
           </RightSideContainerSC>
         </FeatureSC>

@@ -71,6 +71,9 @@ export const SignUpButtonSC = styled.button`
   color: white;
   display: inline-block;
   font-weight: bold;
+  ${sizes.desktop} {
+    cursor: pointer;
+  }
 `;
 
 const RightSide = styled.div`
