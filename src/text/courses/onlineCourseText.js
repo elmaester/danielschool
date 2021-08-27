@@ -3,14 +3,14 @@ import { certifiedTeachers, courseDuration, groupSize, lessonDuration, monthlyPa
 const onlineCourseText = {
   bannerHeading: {
     uk: "Курс вихідного дня ONLINE",
-    en: "",
+    en: "Online weekend course",
   },
   bannerParagraphs: [
   ],
   descriptionParagraphs: [
     {
       uk: "Стандартний курс для працюючих людей, яким складно поєднувати заняття з основною діяльністю по буднях.",
-      en: "",
+      en: "A standardized course for people with full-time jobs who struggle with finding time to study during the work week.",
     },
   ],
   featuresList: [
@@ -31,7 +31,7 @@ const onlineCourseText = {
       sublines: [
         {
           uk: "5,5 місяців",
-          en: "",
+          en: "5.5 months",
         },
       ],
     },
@@ -40,19 +40,19 @@ const onlineCourseText = {
       sublines: [
         {
           uk: "2,15 год.",
-          en: "",
+          en: "2.15 hours",
         },
       ],
     },
     {
       title: {
         uk: "Двічі на тиждень",
-        en: "",
+        en: "Twice per week",
       },
       sublines: [
         {
           uk: "Субота та Неділя",
-          en: "",
+          en: "Saturday and Sunday",
         },
       ],
     },
@@ -69,16 +69,16 @@ const onlineCourseText = {
     {
       title: {
         uk: "Ранковий курс",
-        en: "",
+        en: "Morning course",
       },
       sublines: [
         {
           uk: "1400/міс",
-          en: "",
+          en: "1400/month",
         },
         {
           uk: "(10:00 - 12:15)",
-          en: "",
+          en: "10am - 12:15pm",
         },
       ],
     },

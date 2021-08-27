@@ -7,13 +7,13 @@ import {
 const personalLessonsText = {
   bannerHeading: {
     uk: "Індивідуальні уроки",
-    en: "",
+    en: "Personal lessons",
   },
   bannerParagraphs: [],
   descriptionParagraphs: [
     {
       uk: "Навчання one-on-one з нашими дипломованими викладачами, де розклад уроків узгоджується індивідуально для кожного клієнта.",
-      en: "",
+      en: "Learn one-on-one from our certified teachers, negotiate a schedule based on your personal needs.",
     },
   ],
   featuresList: [
@@ -22,7 +22,7 @@ const personalLessonsText = {
       sublines: [
         {
           uk: "індивідуально",
-          en: "",
+          en: "individual",
         },
       ],
     },
@@ -31,7 +31,7 @@ const personalLessonsText = {
       sublines: [
         {
           uk: "від 60 хвилин",
-          en: "",
+          en: "at least 60 minutes",
         },
       ],
     },
@@ -40,31 +40,31 @@ const personalLessonsText = {
       sublines: [
         {
           uk: "перед початком навчання",
-          en: "",
+          en: "before the lesson starts",
         },
       ],
     },
     {
       title: {
         uk: "Вартість для дітей",
-        en: "",
+        en: "Cost for children",
       },
       sublines: [
         {
           uk: "200 грн за урок",
-          en: "",
+          en: "200 UAH per lesson",
         },
       ],
     },
     {
       title: {
         uk: "Вартість для дорослих",
-        en: "",
+        en: "Cost for adults",
       },
       sublines: [
         {
           uk: "250 грн за урок",
-          en: "",
+          en: "250 UAH per lesson",
         },
       ],
     },

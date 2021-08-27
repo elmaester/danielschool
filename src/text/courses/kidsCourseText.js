@@ -10,17 +10,17 @@ import {
 const kidsCourseText = {
   bannerHeading: {
     uk: "Групові заняття для школярів 8-12 років",
-    en: "",
+    en: "Group classes for school students aged 8-12",
   },
   bannerParagraphs: [],
   descriptionParagraphs: [
     {
       uk: "Навчання відбувається впродовж року на постійній основі і, при цьому, діти проходять проміжні тести.",
-      en: "",
+      en: "Kids study throughout the academic year on a regular basis and take milestone tests.",
     },
     {
       uk: "Діти також спілкуються з носіями мови.",
-      en: "",
+      en: "Kids also communicate with native speakers.",
     },
   ],
   featuresList: [
@@ -35,7 +35,7 @@ const kidsCourseText = {
     {
       title: {
         uk: "Розмовна практика в ігровій формі кожного тижня",
-        en: "",
+        en: "Weekly speaking practice disguised as a game",
       },
       sublines: [],
     },
@@ -44,7 +44,7 @@ const kidsCourseText = {
       sublines: [
         {
           uk: "1,15 год. (15:30 - 16:45)",
-          en: "",
+          en: "1.15 hours, (3:30pm - 4:45pm)",
         },
       ],
     },
@@ -53,21 +53,21 @@ const kidsCourseText = {
       sublines: [
         {
           uk: "100 грн",
-          en: "",
+          en: "100 UAH",
         },
       ],
     },
     {
       title: {
         uk: "Тричі або двічі на тиждень",
-        en: "",
+        en: "3 or 2 times per week",
       },
       sublines: [],
     },
     {
       title: {
         uk: "Групи від 4-х до 8-ми дітей",
-        en: "",
+        en: "Groups of 4 to 8 kids",
       },
       sublines: [],
     },

@@ -11,17 +11,17 @@ import {
 const otherLanguagesCourseText = {
   bannerHeading: {
     uk: "Курси вивчення іспанської, французької, польської, румунської мов",
-    en: "",
+    en: "Spanish, French, Polish and Romanian courses",
   },
   bannerParagraphs: [],
   descriptionParagraphs: [
     {
       uk: "Курси для тих, хто бажає вивчати мову “з нуля” для виїзду за кордон.",
-      en: "",
+      en: "Courses for students with zero prior knowledge and a desire to go abroad.",
     },
     {
       uk: "Уроки включають різноманітні завдання на слухання, стислий курс граматики для розуміння текстів та розмови.",
-      en: "",
+      en: "Lessons include varied listening tasks and a condensed introduction to grammar to help with understanding of texts and speech.",
     },
   ],
   featuresList: [
@@ -34,7 +34,7 @@ const otherLanguagesCourseText = {
       sublines: [
         {
           uk: "2 місяці (І модуль)",
-          en: "",
+          en: "2 months (module I)",
         },
       ],
     },
@@ -43,7 +43,7 @@ const otherLanguagesCourseText = {
       sublines: [
         {
           uk: "1,45 год.",
-          en: "",
+          en: "1.45 hours",
         },
       ],
     },
@@ -52,31 +52,31 @@ const otherLanguagesCourseText = {
       sublines: [
         {
           uk: "150 грн",
-          en: "",
+          en: "150 UAH",
         },
       ],
     },
     {
       title: {
         uk: "Тричі на тиждень",
-        en: "",
+        en: "3 times per week",
       },
       sublines: [
         {
           uk: "Вівторок/Четвер/Субота (дистанційно)",
-          en: "",
+          en: "Tuesday, Thursday, Saturday (remotely)",
         },
       ],
     },
     {
       title: {
         uk: "Час занять",
-        en: "",
+        en: "Time of day",
       },
       sublines: [
         {
           uk: "як денний, так і вечірній",
-          en: "",
+          en: "daytime and/or evening",
         },
       ],
     },

@@ -12,42 +12,42 @@ import {
 const adultsCourseText = {
   bannerHeading: {
     uk: "Групові заняття для дорослих",
-    en: "",
+    en: "Group classes for adults",
   },
   bannerParagraphs: [
     {
       uk: "Групові заняття фокусуються на розмовній практиці англійської з носіями мови з США та Британії.",
-      en: "",
+      en: "Group classes focus on English speaking practice with native speakers from the USA and the UK.",
     },
     {
       uk: "Максимум спілкування і практики!",
-      en: "",
+      en: "Lots of speaking practice!",
     },
     {
       uk: "Це саме те, що потрібно, коли мета навчання - вільно розмовляти англійською!",
-      en: "",
+      en: "Just what you need to achieve English speaking fluency!",
     },
   ],
   descriptionParagraphs: [
     {
       uk: "Курс навчання 4 місяці, за який досягається певний рівень мови.",
-      en: "",
+      en: "A 4-months-long course to help you achieve some proficiency in the language.",
     },
     {
       uk: "Під час занять є практика з носіями мови. ",
-      en: "",
+      en: "You practice with native speakers during the lessons.",
     },
     {
       uk: "Графік занять - фіксований.",
-      en: "",
+      en: "Fixed schedule",
     },
     {
       uk: "Після кожного рівня - ви складаєте тест та отримаєте сертифікат Daniel’s school.",
-      en: "",
+      en: "After completing each level you take a test and receive the Daniel's school certificate.",
     },
     {
       uk: "Наступний курс на вищий рівень надається вже зі знижкою 5%.",
-      en: "",
+      en: "The next higher level course is provided with a 5% discount.",
     },
   ],
   featuresList: [
@@ -68,7 +68,7 @@ const adultsCourseText = {
       sublines: [
         {
           uk: "4 місяці",
-          en: "",
+          en: "4 months",
         },
       ],
     },
@@ -77,7 +77,7 @@ const adultsCourseText = {
       sublines: [
         {
           uk: "1,45 год., тричі на тиждень",
-          en: "",
+          en: "1.45 hours, 3 times per week",
         },
       ],
     },
@@ -92,32 +92,32 @@ const adultsCourseText = {
     {
       title: {
         uk: "Денний курс",
-        en: "",
+        en: "Daytime course",
       },
       sublines: [
         {
           uk: "1500/міс",
-          en: "",
+          en: "1500/month",
         },
         {
           uk: "(10:00-11:45/12:00-13:45)",
-          en: "",
+          en: "(10am-11:45am/12pm-1:45pm)",
         },
       ],
     },
     {
       title: {
         uk: "Вечірній курс",
-        en: "",
+        en: "Evening course",
       },
       sublines: [
         {
           uk: "1600/міс",
-          en: "",
+          en: "1600/month",
         },
         {
           uk: "(17:00-18:45/19:00-20:45)",
-          en: "",
+          en: "(5pm-6:45pm/7pm-8:45pm)",
         },
       ],
     },
