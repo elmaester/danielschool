@@ -43,7 +43,7 @@ const largerCircleSize = `
   font-size: 40px;
 `;
 
-const CircleSC = styled.div`
+export const CircleSC = styled.div`
   ${largerCircleSize};
   margin: 0 auto;
   border-radius: 50%;

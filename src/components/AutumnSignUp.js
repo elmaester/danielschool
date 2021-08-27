@@ -11,7 +11,7 @@ import { more } from "../text/servicesText";
 import { ArrowSC } from "./Service";
 
 const AutumnSignUpSC = styled.section`
-  padding: 40px ${paddings.phone}px 0;
+  padding: 40px ${paddings.phone}px;
   ${sizes.tablet} {
     display: grid;
     grid-template-columns: 1fr 1fr;

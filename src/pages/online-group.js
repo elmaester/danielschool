@@ -4,12 +4,12 @@ import CourseBanner from "../components/CourseBanner";
 import CourseDescription from "../components/CourseDescription";
 import CoursesCommonLayout from "../components/CoursesCommonLayout";
 import FeaturesList from "../components/FeaturesList";
-import adultsCourseText from "../text/courses/adultsCourseText";
+import onlineCourseText from "../text/courses/onlineCourseText";
 
-const AdultsGroupPage = () => {
+const OlineGroupPage = () => {
   const data = useStaticQuery(graphql`
-    query AdultsGroupImageQuery {
-      bannerImage: file(base: { regex: "/601708961/" }) {
+    query OlineGroupImageQuery {
+      bannerImage: file(base: { regex: "/1075401647/" }) {
         childImageSharp {
           gatsbyImageData(
             transformOptions: {
@@ -22,7 +22,7 @@ const AdultsGroupPage = () => {
         }
         base
       }
-      descriptionImage: file(base: { regex: "/1428145862/" }) {
+      descriptionImage: file(base: { regex: "/1716024535/" }) {
         childImageSharp {
           gatsbyImageData(
             transformOptions: { fit: COVER }
@@ -38,18 +38,18 @@ const AdultsGroupPage = () => {
   return (
     <CoursesCommonLayout>
       <CourseBanner
-        bannerHeading={adultsCourseText.bannerHeading}
-        bannerParagraphs={adultsCourseText.bannerParagraphs}
+        bannerHeading={onlineCourseText.bannerHeading}
+        bannerParagraphs={onlineCourseText.bannerParagraphs}
         imageData={data.bannerImage.childImageSharp.gatsbyImageData}
       />
       <CourseDescription
-        descriptionParagraphs={adultsCourseText.descriptionParagraphs}
+        descriptionParagraphs={onlineCourseText.descriptionParagraphs}
         imageData={data.descriptionImage.childImageSharp.gatsbyImageData}
-        imageAlt={adultsCourseText.bannerHeading}
+        imageAlt={onlineCourseText.bannerHeading}
       />
-      <FeaturesList featuresList={adultsCourseText.featuresList} />
+      <FeaturesList featuresList={onlineCourseText.featuresList} />
     </CoursesCommonLayout>
   );
 };
 
-export default AdultsGroupPage;
+export default OlineGroupPage;

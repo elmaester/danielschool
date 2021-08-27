@@ -4,12 +4,12 @@ import CourseBanner from "../components/CourseBanner";
 import CourseDescription from "../components/CourseDescription";
 import CoursesCommonLayout from "../components/CoursesCommonLayout";
 import FeaturesList from "../components/FeaturesList";
-import adultsCourseText from "../text/courses/adultsCourseText";
+import kidsCourseText from "../text/courses/kidsCourseText";
 
-const AdultsGroupPage = () => {
+const KidsGroupPage = () => {
   const data = useStaticQuery(graphql`
-    query AdultsGroupImageQuery {
-      bannerImage: file(base: { regex: "/601708961/" }) {
+    query KidsGroupImageQuery {
+      bannerImage: file(base: { regex: "/1447101821/" }) {
         childImageSharp {
           gatsbyImageData(
             transformOptions: {
@@ -22,7 +22,7 @@ const AdultsGroupPage = () => {
         }
         base
       }
-      descriptionImage: file(base: { regex: "/1428145862/" }) {
+      descriptionImage: file(base: { regex: "/1378507739/" }) {
         childImageSharp {
           gatsbyImageData(
             transformOptions: { fit: COVER }
@@ -38,18 +38,18 @@ const AdultsGroupPage = () => {
   return (
     <CoursesCommonLayout>
       <CourseBanner
-        bannerHeading={adultsCourseText.bannerHeading}
-        bannerParagraphs={adultsCourseText.bannerParagraphs}
+        bannerHeading={kidsCourseText.bannerHeading}
+        bannerParagraphs={kidsCourseText.bannerParagraphs}
         imageData={data.bannerImage.childImageSharp.gatsbyImageData}
       />
       <CourseDescription
-        descriptionParagraphs={adultsCourseText.descriptionParagraphs}
+        descriptionParagraphs={kidsCourseText.descriptionParagraphs}
         imageData={data.descriptionImage.childImageSharp.gatsbyImageData}
-        imageAlt={adultsCourseText.bannerHeading}
+        imageAlt={kidsCourseText.bannerHeading}
       />
-      <FeaturesList featuresList={adultsCourseText.featuresList} />
+      <FeaturesList featuresList={kidsCourseText.featuresList} />
     </CoursesCommonLayout>
   );
 };
 
-export default AdultsGroupPage;
+export default KidsGroupPage;

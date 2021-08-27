@@ -4,12 +4,12 @@ import CourseBanner from "../components/CourseBanner";
 import CourseDescription from "../components/CourseDescription";
 import CoursesCommonLayout from "../components/CoursesCommonLayout";
 import FeaturesList from "../components/FeaturesList";
-import adultsCourseText from "../text/courses/adultsCourseText";
+import personalLessonsText from "../text/courses/personalLessonsText";
 
-const AdultsGroupPage = () => {
+const PersonalLessonsPage = () => {
   const data = useStaticQuery(graphql`
-    query AdultsGroupImageQuery {
-      bannerImage: file(base: { regex: "/601708961/" }) {
+    query PersonalLessonsImageQuery {
+      bannerImage: file(base: { regex: "/200546540/" }) {
         childImageSharp {
           gatsbyImageData(
             transformOptions: {
@@ -22,7 +22,7 @@ const AdultsGroupPage = () => {
         }
         base
       }
-      descriptionImage: file(base: { regex: "/1428145862/" }) {
+      descriptionImage: file(base: { regex: "/765467182/" }) {
         childImageSharp {
           gatsbyImageData(
             transformOptions: { fit: COVER }
@@ -38,18 +38,18 @@ const AdultsGroupPage = () => {
   return (
     <CoursesCommonLayout>
       <CourseBanner
-        bannerHeading={adultsCourseText.bannerHeading}
-        bannerParagraphs={adultsCourseText.bannerParagraphs}
+        bannerHeading={personalLessonsText.bannerHeading}
+        bannerParagraphs={personalLessonsText.bannerParagraphs}
         imageData={data.bannerImage.childImageSharp.gatsbyImageData}
       />
       <CourseDescription
-        descriptionParagraphs={adultsCourseText.descriptionParagraphs}
+        descriptionParagraphs={personalLessonsText.descriptionParagraphs}
         imageData={data.descriptionImage.childImageSharp.gatsbyImageData}
-        imageAlt={adultsCourseText.bannerHeading}
+        imageAlt={personalLessonsText.bannerHeading}
       />
-      <FeaturesList featuresList={adultsCourseText.featuresList} />
+      <FeaturesList featuresList={personalLessonsText.featuresList} />
     </CoursesCommonLayout>
   );
 };
 
-export default AdultsGroupPage;
+export default PersonalLessonsPage;

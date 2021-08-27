@@ -4,12 +4,12 @@ import CourseBanner from "../components/CourseBanner";
 import CourseDescription from "../components/CourseDescription";
 import CoursesCommonLayout from "../components/CoursesCommonLayout";
 import FeaturesList from "../components/FeaturesList";
-import adultsCourseText from "../text/courses/adultsCourseText";
+import otherLanguagesCourseText from "../text/courses/otherLanguagesCourseText";
 
-const AdultsGroupPage = () => {
+const OtherLanguagesPage = () => {
   const data = useStaticQuery(graphql`
-    query AdultsGroupImageQuery {
-      bannerImage: file(base: { regex: "/601708961/" }) {
+    query OtherLanguagesImageQuery {
+      bannerImage: file(base: { regex: "/193471265/" }) {
         childImageSharp {
           gatsbyImageData(
             transformOptions: {
@@ -22,7 +22,7 @@ const AdultsGroupPage = () => {
         }
         base
       }
-      descriptionImage: file(base: { regex: "/1428145862/" }) {
+      descriptionImage: file(base: { regex: "/483879037/" }) {
         childImageSharp {
           gatsbyImageData(
             transformOptions: { fit: COVER }
@@ -38,18 +38,18 @@ const AdultsGroupPage = () => {
   return (
     <CoursesCommonLayout>
       <CourseBanner
-        bannerHeading={adultsCourseText.bannerHeading}
-        bannerParagraphs={adultsCourseText.bannerParagraphs}
+        bannerHeading={otherLanguagesCourseText.bannerHeading}
+        bannerParagraphs={otherLanguagesCourseText.bannerParagraphs}
         imageData={data.bannerImage.childImageSharp.gatsbyImageData}
       />
       <CourseDescription
-        descriptionParagraphs={adultsCourseText.descriptionParagraphs}
+        descriptionParagraphs={otherLanguagesCourseText.descriptionParagraphs}
         imageData={data.descriptionImage.childImageSharp.gatsbyImageData}
-        imageAlt={adultsCourseText.bannerHeading}
+        imageAlt={otherLanguagesCourseText.bannerHeading}
       />
-      <FeaturesList featuresList={adultsCourseText.featuresList} />
+      <FeaturesList featuresList={otherLanguagesCourseText.featuresList} />
     </CoursesCommonLayout>
   );
 };
 
-export default AdultsGroupPage;
+export default OtherLanguagesPage;

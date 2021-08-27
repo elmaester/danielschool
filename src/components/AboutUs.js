@@ -7,7 +7,7 @@ import { heading, paragraphs } from "../text/aboutUsText";
 
 const AboutUsSC = styled.section`
   padding: 0 ${paddings.phone}px;
-  margin: 39px 0;
+  margin-bottom: 40px;
   ${sizes.tabletLandscape} {
     padding: 0 ${paddings.tabletLandscape}px;
   }
