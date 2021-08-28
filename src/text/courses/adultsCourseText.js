@@ -39,7 +39,7 @@ const adultsCourseText = {
     },
     {
       uk: "Графік занять - фіксований.",
-      en: "Fixed schedule",
+      en: "Fixed schedule.",
     },
     {
       uk: "Після кожного рівня - ви складаєте тест та отримаєте сертифікат Daniel’s school.",

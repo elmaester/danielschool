@@ -34,16 +34,21 @@ const BelowTitleContainer = styled.div`
 `;
 
 const ParagraphsContainer = styled.div`
+  p:not(:first-of-type) {
+    margin-top: 10px;
+  }
   ${sizes.phone} {
     margin-bottom: 20px;
-    p:not(:first-of-type) {
-      margin-top: 10px;
-    }
   }
   ${sizes.tablet} {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+  }
+  ${sizes.desktop} {
+    p:not(:first-of-type) {
+      margin-top: 20px;
+    }
   }
 `;
 
