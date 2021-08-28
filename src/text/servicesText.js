@@ -12,7 +12,7 @@ export const services = [
     uk: "Групові заняття для дорослих",
     en: "Group classes for adults",
     icon: () => <GroupClassesIcon />,
-    link: "group-classes-adults",
+    link: "adults-group",
   },
   {
     uk: "Індивідуальні уроки",
@@ -24,13 +24,13 @@ export const services = [
     uk: "Групові заняття для школярів",
     en: "Group classes for school students",
     icon: () => <GroupSchoolIcon />,
-    link: "group-classes-school",
+    link: "kids-group",
   },
   {
     uk: "Курси вихідного дня онлайн",
     en: "Online weekend courses",
     icon: () => <OnlineWeekendIcon />,
-    link: "online-weekend",
+    link: "online-group",
   },
   {
     uk: "Курси іспанської, румунської, польської мов",

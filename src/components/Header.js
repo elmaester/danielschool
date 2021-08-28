@@ -6,6 +6,7 @@ import MenuIcon from "../images/Menu.svg";
 import MenuCloseIcon from "../images/Close.svg";
 import { paddings, sizes } from "../responsive";
 import LanguageSwitcher from "./LanguageSwitcher";
+import { Link } from "gatsby";
 
 const HeaderSC = styled.div`
   padding: 11px ${paddings.phone}px;
@@ -66,9 +67,11 @@ const Header = () => {
     <>
       <HeaderOuterContainerSC>
         <HeaderSC>
-          <LogoContainerSC>
-            <Logo />
-          </LogoContainerSC>
+          <Link to="/">
+            <LogoContainerSC>
+              <Logo />
+            </LogoContainerSC>
+          </Link>
           <LanguageSwitcherInsideSC>
             <LanguageSwitcher />
           </LanguageSwitcherInsideSC>
