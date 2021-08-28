@@ -5,7 +5,8 @@ import { paddings } from "../responsive";
 import { heading, location, phoneNuner } from "../text/contactsText";
 
 const ContactsSC = styled.section`
-  padding: 40px ${paddings.phone}px 35px ${paddings.phone}px;
+  padding: 0 ${paddings.phone}px;
+  margin: 40px 0;
   text-align: center;
 `;
 const Heading = styled.h2`
