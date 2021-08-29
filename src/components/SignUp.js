@@ -22,7 +22,7 @@ import {
 } from "../text/signUpText";
 import { graphql, useStaticQuery } from "gatsby";
 import { convertToBgImage } from "gbimage-bridge";
-import { handleFormSubmit } from "../customFunctions";
+import { handleFormSubmit, validateSignUpData } from "../customFunctions";
 
 const SignUpSC = styled(BackgroundImage)`
   color: white;
@@ -136,7 +136,11 @@ const SignUp = () => {
           className="gform"
           method="POST"
           action={process.env.GATSBY_EMAIL}
-          onSubmit={(e) => handleFormSubmit(e, setFormStatus)}
+          onSubmit={(e) => {
+            e.preventDefault();
+            validateSignUpData(clientName, number, chosenLanguages) &&
+              handleFormSubmit(e, setFormStatus);
+          }}
         >
           <FormInputSC
             type="text"
@@ -144,12 +148,14 @@ const SignUp = () => {
             value={clientName}
             name="name"
             onChange={(e) => setClientName(e.target.value)}
+            required={true}
           />
           <input
             name="languages"
             style={{ display: "none" }}
             value={chosenLanguages}
             onChange={() => {}}
+            required={true}
           />
           <input name="gotcha" style={{ display: "none" }} />
           <Multiselect
@@ -173,7 +179,7 @@ const SignUp = () => {
             containerClass="SignUp__PhoneInput__container"
             inputClass="SignUp__PhoneInput__input"
             value={number}
-            inputProps={{ name: "phone" }}
+            inputProps={{ name: "phone", required: true }}
             onChange={setNumber}
           />
           <SendButtonSC type="submit" disabled={formStatus === "sending"}>

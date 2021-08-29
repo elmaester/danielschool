@@ -45,7 +45,7 @@ const CourseBannerSC = styled(BackgroundImage)`
       font-size: 16px;
     }
   }
-  button {
+  .sign-up-link {
     margin: 0 auto;
   }
 `;
@@ -62,7 +62,7 @@ const CourseBanner = ({ bannerHeading, bannerParagraphs, imageData }) => {
           ))}
         </div>
       )}
-      <Link to="/contacts">
+      <Link to="/contacts" className="sign-up-link">
         <SignUpButtonSC>{signUpButtonText[lang]}</SignUpButtonSC>
       </Link>
     </CourseBannerSC>

@@ -1,14 +1,15 @@
 export const items = [
   {
     heading: {
-      uk: "Індивідуальні та групові заняття для дорослих та школярів",
-      en: "Personal and group classes for adults and school students",
+      uk: "Індивідуальні та групові заняття для дорослих",
+      en: "Personal and group classes for adults",
     },
     subtext: {
       uk: "Професійні викладачі та носії мови з США та Британії",
       en: "Professional teachers and native speakers from the USA and the UK",
     },
     imageID: "637186963",
+    link: "adults-group"
   },
   {
     heading: {
@@ -20,6 +21,7 @@ export const items = [
       en: "4 to 8 kids per group",
     },
     imageID: "1448137991",
+    link: "kids-group"
   },
   {
     heading: {
@@ -31,6 +33,7 @@ export const items = [
       en: "4 to 8 students per group",
     },
     imageID: "308787692",
+    link: "online-group"
   },
   {
     heading: {
@@ -42,6 +45,7 @@ export const items = [
       en: "4 to 8 students per group",
     },
     imageID: "1186037383",
+    link: "other-languages"
   },
 ];
 

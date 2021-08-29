@@ -17,7 +17,7 @@ function getFormData(form) {
       } else if (elements[k].length > 0) {
         return elements[k].item(0).name;
       }
-      return "error, investigate"
+      return "error, investigate";
     })
     .filter(function (item, pos, self) {
       return self.indexOf(item) === pos && item;
@@ -52,7 +52,6 @@ function getFormData(form) {
 }
 
 export function handleFormSubmit(event, setStatus) {
-  event.preventDefault();
   setStatus("sending");
   const form = event.target;
   const formData = getFormData(form);
@@ -83,4 +82,9 @@ export function handleFormSubmit(event, setStatus) {
     })
     .join("&");
   xhr.send(encoded);
+}
+
+export function validateSignUpData(name, phone, languages) {
+  if (name.length < 3 || phone.length < 12 || !languages.length) return false;
+  return true;
 }

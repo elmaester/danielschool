@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
 import { convertToBgImage } from "gbimage-bridge";
 import * as React from "react";
@@ -55,7 +56,7 @@ const LeftSide = styled.div`
       line-height: 54px;
     }
   }
-  button {
+  .sign-up-link {
     margin: 0 auto;
     ${sizes.tablet} {
       margin: 0;
@@ -107,7 +108,9 @@ const CarouselItem = ({ item, imageData }) => {
       <LeftSide>
         <h2>{item.heading[lang]}</h2>
         <p>{item.subtext[lang]}</p>
-        <SignUpButtonSC>{signUpButtonText[lang]}</SignUpButtonSC>
+        <Link to={"/" + item.link} className="sign-up-link">
+          <SignUpButtonSC>{signUpButtonText[lang]}</SignUpButtonSC>
+        </Link>
       </LeftSide>
       <RightSide>
         <h3>Daniel's School</h3>
