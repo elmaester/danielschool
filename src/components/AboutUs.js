@@ -26,27 +26,15 @@ const AboutUsSC = styled.section`
   }
 `;
 
-const FlexContainerSC = styled.div`
-  ${sizes.tabletLandscape} {
-    display: flex;
-    align-items: center;
-  }
-`;
-
 const DanielImageContainerSC = styled.div`
-  margin-bottom: 40px;
-  text-align: center;
+  width: 137px;
+  min-width: 137px;
+  max-width: 137px;
+  float: left;
+  margin-right: 15px;
   ${sizes.tabletLandscape} {
-    margin-bottom: 0;
-    margin-right: 80px;
-    text-align: left;
-    width: 137px;
-    min-width: 137px;
-    max-width: 137px;
+    margin-right: 25px;
   }
-`;
-
-const ParagraphsContainerSC = styled.div`
 `;
 
 const AboutUs = () => {
@@ -54,16 +42,14 @@ const AboutUs = () => {
   return (
     <AboutUsSC>
       <h2>{heading[lang]}</h2>
-      <FlexContainerSC>
         <DanielImageContainerSC>
           <StaticImage src="../images/Daniel.jpg" alt="Daniel Hayden" />
         </DanielImageContainerSC>
-        <ParagraphsContainerSC>
+        <div>
           {paragraphs.map((paragraph, index) => (
             <p key={index}>{paragraph[lang]}</p>
           ))}
-        </ParagraphsContainerSC>
-      </FlexContainerSC>
+        </div>
     </AboutUsSC>
   );
 };
