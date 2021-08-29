@@ -4,8 +4,8 @@ import { Link } from "gatsby";
 import { memo, navigation, privacy } from "../text/footerText";
 import { sizes, paddings, blackColor } from "../responsive";
 import GlobalContext from "../global-context";
-
-const { tabletLandscape, desktop } = sizes;
+import FacebookIcon from "../images/facebook.svg";
+import InstagramIcon from "../images/instagram.svg";
 
 const greyColor = "#c4c4c4";
 
@@ -13,10 +13,10 @@ const FooterSC = styled.footer`
   color: ${greyColor};
   background-color: ${blackColor};
   padding: 0 ${paddings.phone}px;
-  ${tabletLandscape} {
+  ${sizes.tabletLandscape} {
     padding: 0 ${paddings.tabletLandscape}px;
   }
-  ${desktop} {
+  ${sizes.desktop} {
     padding: 0 ${paddings.desktop}px;
   }
 `;
@@ -29,9 +29,15 @@ const NavSectionTitleSC = styled.h2`
 const NavItemSC = styled.li`
   &:not(:last-of-type) {
     margin-bottom: 20px;
+    ${sizes.desktop} {
+      margin-bottom: 15px;
+    }
   }
   a {
     padding: 2px 0;
+    ${sizes.desktop} {
+      line-height: 20px;
+    }
     &:hover {
       border-bottom: 1px solid #de1a3e;
       color: white;
@@ -41,19 +47,25 @@ const NavItemSC = styled.li`
 
 const UpperPartSC = styled.div`
   padding-top: 42px;
-  ${tabletLandscape} {
+  ${sizes.tablet} {
     display: grid;
-    grid-template-columns: 4fr 1fr;
-  }
-  ${desktop} {
+    gap: 35px;
     grid-template-columns: 3fr 1fr;
+  }
+  ${sizes.desktop} {
+    grid-template-columns: 4fr 1fr;
+    gap: 10px;
   }
 `;
 
 const NavigationSC = styled.nav`
-  ${tabletLandscape} {
-    display: flex;
-    justify-content: space-between;
+  ${sizes.tablet} {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  ${sizes.desktop} {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
   }
 `;
 
@@ -81,14 +93,39 @@ const SocialsMemo = styled.div`
     padding: 40px 35px;
     text-align: center;
     line-height: 26px;
-    ${tabletLandscape} {
+    ${sizes.tablet} {
+      text-align: right;
       padding: 0;
     }
+  }
+  ${sizes.phone} {
+    margin-top: 30px;
+  }
+`;
+
+const SocialIconContainerSC = styled.div`
+  width: 32px;
+  min-width: 32px;
+  max-width: 32px;
+  height: 32px;
+  min-height: 32px;
+  max-height: 32px;
+  & + & {
+    margin-left: 15px;
+  }
+`;
+
+const SocialsContainerSC = styled.div`
+  display: flex;
+  justify-content: center;
+  ${sizes.tablet} {
+    justify-content: flex-end;
+    margin-bottom: 19px;
   }
 `;
 
 const Footer = () => {
-  const {lang} = React.useContext(GlobalContext);
+  const { lang } = React.useContext(GlobalContext);
   return (
     <FooterSC>
       <UpperPartSC>
@@ -107,6 +144,14 @@ const Footer = () => {
           ))}
         </NavigationSC>
         <SocialsMemo>
+          <SocialsContainerSC>
+            <SocialIconContainerSC>
+              <FacebookIcon />
+            </SocialIconContainerSC>
+            <SocialIconContainerSC>
+              <InstagramIcon />
+            </SocialIconContainerSC>
+          </SocialsContainerSC>
           <p>
             <span style={{ fontWeight: "bold" }}>Daniel's School </span>
             {memo[lang]}
