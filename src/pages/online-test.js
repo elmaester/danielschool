@@ -92,11 +92,9 @@ const OnlineTestPage = () => {
       }
       return question.correctness;
     });
-    console.log(correctAnswers);
     const userAnswers = Object.values(userAnswersObj);
     let numberOfCorrectAnswers = 0;
     for (let i = 0; i < correctAnswers.length; i++) {
-      console.log(`${userAnswers[i]}; ${correctAnswers[i]}`);
       if (userAnswers[i] === correctAnswers[i]) {
         numberOfCorrectAnswers += 1;
       }
@@ -136,8 +134,9 @@ const OnlineTestPage = () => {
                   >
                     <input
                       type="radio"
-                      name={questionIndex}
+                      name={`q${questionIndex}`}
                       id={`q${questionIndex}a1`}
+                      required
                       onInput={() =>
                         setUserAnswersObj({
                           ...userAnswersObj,
@@ -152,8 +151,9 @@ const OnlineTestPage = () => {
                   >
                     <input
                       type="radio"
-                      name={questionIndex}
+                      name={`q${questionIndex}`}
                       id={`q${questionIndex}a2`}
+                      required
                       onInput={() =>
                         setUserAnswersObj({
                           ...userAnswersObj,
@@ -172,8 +172,9 @@ const OnlineTestPage = () => {
                   >
                     <input
                       type="radio"
-                      name={questionIndex}
+                      name={`q${questionIndex}`}
                       id={`q${questionIndex}a${answerIndex}`}
+                      required
                       onInput={() =>
                         setUserAnswersObj({
                           ...userAnswersObj,
