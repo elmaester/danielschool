@@ -1,3 +1,4 @@
+import { Link } from "gatsby";
 import BackgroundImage from "gatsby-background-image";
 import { convertToBgImage } from "gbimage-bridge";
 import * as React from "react";
@@ -49,11 +50,7 @@ const CourseBannerSC = styled(BackgroundImage)`
   }
 `;
 
-const CourseBanner = ({
-  bannerHeading,
-  bannerParagraphs,
-  imageData,
-}) => {
+const CourseBanner = ({ bannerHeading, bannerParagraphs, imageData }) => {
   const { lang } = React.useContext(GlobalContext);
   return (
     <CourseBannerSC {...convertToBgImage(imageData)}>
@@ -65,7 +62,9 @@ const CourseBanner = ({
           ))}
         </div>
       )}
-      <SignUpButtonSC>{signUpButtonText[lang]}</SignUpButtonSC>
+      <Link to="/contacts">
+        <SignUpButtonSC>{signUpButtonText[lang]}</SignUpButtonSC>
+      </Link>
     </CourseBannerSC>
   );
 };

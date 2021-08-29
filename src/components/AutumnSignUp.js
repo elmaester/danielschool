@@ -50,7 +50,7 @@ const ActionSectionSC = styled.div`
       margin-top: 100px;
     }
   }
-  button {
+  .contacts-link {
     margin: 30px auto 18px;
     ${sizes.tablet} {
       margin-left: 0;
@@ -88,8 +88,10 @@ const AutumnSignUp = () => {
       </ImageContainerSC>
       <ActionSectionSC>
         <h2>{signUpAutumn[lang]}</h2>
-        <SignUpButtonSC>{signUpButtonText[lang]}</SignUpButtonSC>
-        <Link style={{ textAlign: "right" }}>
+        <Link to="/contacts" className="contacts-link">
+          <SignUpButtonSC>{signUpButtonText[lang]}</SignUpButtonSC>
+        </Link>
+        <Link to="/adults-group" style={{ textAlign: "right" }}>
           {more[lang]} <ArrowSC>→</ArrowSC>
         </Link>
       </ActionSectionSC>

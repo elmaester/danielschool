@@ -4,7 +4,13 @@ import PhoneInput from "react-phone-input-2";
 import Multiselect from "multiselect-react-dropdown";
 import "./SignUp__InputStyles.css";
 import GlobalContext from "../global-context";
-import { blackColor, paddings, redColor, sizes } from "../responsive";
+import {
+  blackColor,
+  grayColor,
+  paddings,
+  redColor,
+  sizes,
+} from "../responsive";
 import BackgroundImage from "gatsby-background-image";
 import {
   heading,
@@ -12,9 +18,11 @@ import {
   languages,
   name,
   sendButton,
+  thankYouMessage,
 } from "../text/signUpText";
 import { graphql, useStaticQuery } from "gatsby";
 import { convertToBgImage } from "gbimage-bridge";
+import { handleFormSubmit } from "../customFunctions";
 
 const SignUpSC = styled(BackgroundImage)`
   color: white;
@@ -74,6 +82,22 @@ const SendButtonSC = styled.button`
   margin-top: 42px;
   font-size: 16px;
   font-weight: bold;
+  ${sizes.desktop} {
+    cursor: pointer;
+  }
+  &:disabled {
+    background-color: ${grayColor};
+  }
+`;
+
+const ThankYouMessageSC = styled.div`
+  min-height: 280px;
+  display: flex;
+  p {
+    font-size: 26px;
+    text-shadow: 0.2px 0.2px ${blackColor};
+    margin-top: auto;
+  }
 `;
 
 const SignUp = () => {
@@ -97,44 +121,71 @@ const SignUp = () => {
   const { lang } = React.useContext(GlobalContext);
   const [clientName, setClientName] = React.useState("");
   const [number, setNumber] = React.useState("380");
-  const [chosenLanguages, setChosenLanguages] = React.useState([]);
+  const [chosenLanguages, setChosenLanguages] = React.useState("");
+  const handleList = (list) => {
+    setChosenLanguages(list.map((item) => item.en).join(", "));
+  };
+  const [formStatus, setFormStatus] = React.useState("initial");
   return (
     <SignUpSC {...convertToBgImage(data.file.childImageSharp.gatsbyImageData)}>
       <div>
         <h2>{heading[lang]}</h2>
       </div>
-      <aside>
-        <FormInputSC
-          type="text"
-          placeholder={name[lang]}
-          value={clientName}
-          onChange={(e) => setClientName(e.target.value)}
-        />
-        <Multiselect
-          options={languages}
-          displayValue={lang}
-          placeholder={languageChoice[lang]}
-          closeIcon="cancel"
-          closeOnSelect={false}
-          hidePlaceholder
-          onSelect={(selectedList) =>
-            setChosenLanguages(selectedList.map((lang) => lang.en))
-          }
-          onRemove={(selectedList) =>
-            setChosenLanguages(selectedList.map((lang) => lang.en))
-          }
-        />
-        <PhoneInput
-          country="ua"
-          disableDropdown
-          countryCodeEditable={false}
-          containerClass="SignUp__PhoneInput__container"
-          inputClass="SignUp__PhoneInput__input"
-          value={number}
-          onChange={setNumber}
-        />
-        <SendButtonSC>{sendButton[lang]}</SendButtonSC>
-      </aside>
+      {(formStatus === "initial" || formStatus === "sending") && (
+        <form
+          className="gform"
+          method="POST"
+          action={process.env.GATSBY_EMAIL}
+          onSubmit={(e) => handleFormSubmit(e, setFormStatus)}
+        >
+          <FormInputSC
+            type="text"
+            placeholder={name[lang]}
+            value={clientName}
+            name="name"
+            onChange={(e) => setClientName(e.target.value)}
+          />
+          <input
+            name="languages"
+            style={{ display: "none" }}
+            value={chosenLanguages}
+            onChange={() => {}}
+          />
+          <input name="gotcha" style={{ display: "none" }} />
+          <Multiselect
+            options={languages}
+            displayValue={lang}
+            placeholder={languageChoice[lang]}
+            closeIcon="cancel"
+            closeOnSelect={false}
+            hidePlaceholder
+            onSelect={(selectedList) => {
+              handleList(selectedList);
+            }}
+            onRemove={(selectedList) => {
+              handleList(selectedList);
+            }}
+          />
+          <PhoneInput
+            country="ua"
+            disableDropdown
+            countryCodeEditable={false}
+            containerClass="SignUp__PhoneInput__container"
+            inputClass="SignUp__PhoneInput__input"
+            value={number}
+            inputProps={{ name: "phone" }}
+            onChange={setNumber}
+          />
+          <SendButtonSC type="submit" disabled={formStatus === "sending"}>
+            {sendButton[lang]}
+          </SendButtonSC>
+        </form>
+      )}
+      {formStatus === "sent" && (
+        <ThankYouMessageSC>
+          <p>{thankYouMessage[lang]}</p>
+        </ThankYouMessageSC>
+      )}
     </SignUpSC>
   );
 };

@@ -45,3 +45,8 @@ export const signUpAutumn = {
   uk: "Набір на осінні курси англійської мови",
   en: "Signup for the autumn English course is in progress",
 };
+
+export const thankYouMessage = {
+  uk: "Дякуємо! Вашу заявку прийнято, і ми незабаром зв'яжемось з Вами! ",
+  en: "Thank you! Your application has been received and we will get in touch soon!",
+};
