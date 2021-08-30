@@ -146,12 +146,20 @@ const Footer = () => {
         </NavigationSC>
         <SocialsMemo>
           <SocialsContainerSC>
-            <OutboundLink href="https://www.facebook.com/profile.php?id=100072396455464" target="_blank">
+            <OutboundLink
+              href="https://www.facebook.com/profile.php?id=100072396455464"
+              target="_blank"
+              rel="noopener"
+            >
               <SocialIconContainerSC>
                 <FacebookIcon />
               </SocialIconContainerSC>
             </OutboundLink>
-            <OutboundLink href="https://instagram.com/daniels_school" target="_blank">
+            <OutboundLink
+              href="https://instagram.com/daniels_school"
+              target="_blank"
+              rel="noopener"
+            >
               <SocialIconContainerSC>
                 <InstagramIcon />
               </SocialIconContainerSC>
