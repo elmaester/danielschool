@@ -6,6 +6,7 @@ import { sizes, paddings, blackColor } from "../responsive";
 import GlobalContext from "../global-context";
 import FacebookIcon from "../images/facebook.svg";
 import InstagramIcon from "../images/instagram.svg";
+import { OutboundLink } from "gatsby-plugin-google-gtag";
 
 const greyColor = "#c4c4c4";
 
@@ -110,14 +111,14 @@ const SocialIconContainerSC = styled.div`
   height: 32px;
   min-height: 32px;
   max-height: 32px;
-  & + & {
-    margin-left: 15px;
-  }
 `;
 
 const SocialsContainerSC = styled.div`
   display: flex;
   justify-content: center;
+  a + a {
+    margin-left: 15px;
+  }
   ${sizes.tablet} {
     justify-content: flex-end;
     margin-bottom: 19px;
@@ -145,12 +146,16 @@ const Footer = () => {
         </NavigationSC>
         <SocialsMemo>
           <SocialsContainerSC>
-            <SocialIconContainerSC>
-              <FacebookIcon />
-            </SocialIconContainerSC>
-            <SocialIconContainerSC>
-              <InstagramIcon />
-            </SocialIconContainerSC>
+            <OutboundLink href="https://www.facebook.com/profile.php?id=100072396455464" target="_blank">
+              <SocialIconContainerSC>
+                <FacebookIcon />
+              </SocialIconContainerSC>
+            </OutboundLink>
+            <OutboundLink href="https://instagram.com/daniels_school" target="_blank">
+              <SocialIconContainerSC>
+                <InstagramIcon />
+              </SocialIconContainerSC>
+            </OutboundLink>
           </SocialsContainerSC>
           <p>
             <span style={{ fontWeight: "bold" }}>Daniel's School </span>
