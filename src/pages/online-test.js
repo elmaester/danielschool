@@ -2,7 +2,7 @@ import * as React from "react";
 import styled from "styled-components";
 import { SignUpButtonSC } from "../components/CarouselItem";
 import Footer from "../components/Footer";
-import GlobalStyle from "../components/GlobalStyle";
+import GlobalStyle, { PageTitleSC } from "../components/GlobalStyle";
 import Header from "../components/Header";
 import SignUp from "../components/SignUp";
 import GlobalContext from "../global-context";
@@ -72,12 +72,6 @@ const VerdictSC = styled.div`
   ${sizes.tabletLandscape} {
     padding: 30px;
   }
-`;
-
-const PageTitleSC = styled.h2`
-  font-size: 42px;
-  text-align: center;
-  margin: 20px 0 50px;
 `;
 
 const OnlineTestPage = () => {

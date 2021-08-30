@@ -42,8 +42,8 @@ const adultsCourseText = {
       en: "Fixed schedule.",
     },
     {
-      uk: "Після кожного рівня - ви складаєте тест та отримаєте сертифікат Daniel’s school.",
-      en: "After completing each level you take a test and receive the Daniel's school certificate.",
+      uk: "Після кожного рівня - ви складаєте тест та отримаєте сертифікат Daniel’s School.",
+      en: "After completing each level you take a test and receive the Daniel's School certificate.",
     },
     {
       uk: "Наступний курс на вищий рівень надається вже зі знижкою 5%.",

@@ -23,3 +23,8 @@ export const location = [
 ];
 
 export const phoneNuner = "+38 (066) 743 11 37";
+
+export const showEmailButtonText = {
+  uk: "Показати email",
+  en: "Show email",
+};

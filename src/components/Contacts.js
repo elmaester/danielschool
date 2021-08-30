@@ -4,7 +4,8 @@ import GoogleMapReact from "google-map-react";
 import GlobalContext from "../global-context";
 import MapPin from "../images/map-pin.svg";
 import { paddings, sizes } from "../responsive";
-import { heading, location, phoneNuner } from "../text/contactsText";
+import { heading, location, phoneNuner, showEmailButtonText } from "../text/contactsText";
+import { SignUpButtonSC } from "./CarouselItem";
 
 const ContactsSC = styled.section`
   padding: 0 ${paddings.phone}px;
@@ -41,7 +42,7 @@ const Phone = styled.h2`
   margin-bottom: 15px;
 `;
 const Location = styled.p`
-  &+& {
+  & + & {
     margin-top: 2px;
   }
 `;
@@ -64,9 +65,10 @@ const MapContainerSC = styled.div`
   }
 `;
 
-const Contacts = () => {
+const Contacts = ({ showEmail }) => {
   const { lang } = React.useContext(GlobalContext);
   const schoolCoords = { lat: 48.2857092, lng: 25.9402003 };
+  const [emailShown, setEmailShown] = React.useState(false);
   return (
     <ContactsSC>
       <TextContainerSC>
@@ -75,6 +77,13 @@ const Contacts = () => {
         {location.map((line, index) => (
           <Location key={index}>{line[lang]}</Location>
         ))}
+        {showEmail && emailShown ? (
+          <Location style={{marginTop: "20px"}}>{process.env.GATSBY_EMAIL}</Location>
+        ) : (
+          <SignUpButtonSC style={{marginTop: "20px"}} onClick={() => setEmailShown(true)}>
+            {showEmailButtonText[lang]}
+          </SignUpButtonSC>
+        )}
       </TextContainerSC>
       <MapContainerSC>
         <GoogleMapReact

@@ -5,8 +5,8 @@ export const heading = {
 
 export const paragraphs = [
   {
-    uk: "Daniel’s school - школа імені видатного чернівчанина, блискучого вчителя і харизматичного американця.",
-    en: "Daniel’s school bears the name of a renowned Chernivtsier, brilliant teacher and charismatic American."
+    uk: "Daniel’s School - школа імені видатного чернівчанина, блискучого вчителя і харизматичного американця.",
+    en: "Daniel’s School bears the name of a renowned Chernivtsier, brilliant teacher and charismatic American."
   },
   {
     uk: "Ми — команда молодих, кваліфікованих та вмотивованих викладачів, які постійно підвищують свій професіоналізм.",

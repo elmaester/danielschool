@@ -1,5 +1,5 @@
 import * as React from "react";
-import { createGlobalStyle } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 
 const GlobalStyleSC = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
@@ -64,3 +64,9 @@ const GlobalStyle = ({ children }) => (
 );
 
 export default GlobalStyle;
+
+export const PageTitleSC = styled.h2`
+  font-size: 42px;
+  text-align: center;
+  margin: 20px 0 50px;
+`;

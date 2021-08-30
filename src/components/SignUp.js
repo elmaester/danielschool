@@ -135,7 +135,7 @@ const SignUp = () => {
         <form
           className="gform"
           method="POST"
-          action={process.env.GATSBY_EMAIL}
+          action={process.env.GATSBY_FORM}
           onSubmit={(e) => {
             e.preventDefault();
             validateSignUpData(clientName, number, chosenLanguages) &&
