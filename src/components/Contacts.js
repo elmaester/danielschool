@@ -4,7 +4,12 @@ import GoogleMapReact from "google-map-react";
 import GlobalContext from "../global-context";
 import MapPin from "../images/map-pin.svg";
 import { paddings, sizes } from "../responsive";
-import { heading, location, phoneNuner, showEmailButtonText } from "../text/contactsText";
+import {
+  heading,
+  location,
+  phoneNuner,
+  showEmailButtonText,
+} from "../text/contactsText";
 import { SignUpButtonSC } from "./CarouselItem";
 
 const ContactsSC = styled.section`
@@ -77,13 +82,19 @@ const Contacts = ({ showEmail }) => {
         {location.map((line, index) => (
           <Location key={index}>{line[lang]}</Location>
         ))}
-        {showEmail && emailShown ? (
-          <Location style={{marginTop: "20px"}}>{process.env.GATSBY_EMAIL}</Location>
-        ) : (
-          <SignUpButtonSC style={{marginTop: "20px"}} onClick={() => setEmailShown(true)}>
-            {showEmailButtonText[lang]}
-          </SignUpButtonSC>
-        )}
+        {showEmail &&
+          (emailShown ? (
+            <Location style={{ marginTop: "20px" }}>
+              {process.env.GATSBY_EMAIL}
+            </Location>
+          ) : (
+            <SignUpButtonSC
+              style={{ marginTop: "20px" }}
+              onClick={() => setEmailShown(true)}
+            >
+              {showEmailButtonText[lang]}
+            </SignUpButtonSC>
+          ))}
       </TextContainerSC>
       <MapContainerSC>
         <GoogleMapReact
