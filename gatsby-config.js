@@ -5,7 +5,7 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     siteUrl: "https://www.yourdomain.tld",
-    title: "Daniel School",
+    title: "Daniel's School",
   },
   plugins: [
     "gatsby-plugin-styled-components",
@@ -29,8 +29,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Daniel School`,
-        short_name: `Daniel School`,
+        name: `Daniel's School`,
+        short_name: `Daniel's School`,
         start_url: `/`,
         display: `standalone`,
         icon: 'src/images/favicon.svg'

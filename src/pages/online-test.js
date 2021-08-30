@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import { SignUpButtonSC } from "../components/CarouselItem";
 import Footer from "../components/Footer";
@@ -103,6 +104,9 @@ const OnlineTestPage = () => {
   };
   return (
     <GlobalStyle>
+      <Helmet>
+        <title>Online Test</title>
+      </Helmet>
       <Header />
       <OnlineTestSC
         onSubmit={(e) => {

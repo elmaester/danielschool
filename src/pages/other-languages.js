@@ -1,12 +1,15 @@
 import { graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import CourseBanner from "../components/CourseBanner";
 import CourseDescription from "../components/CourseDescription";
 import CoursesCommonLayout from "../components/CoursesCommonLayout";
 import FeaturesList from "../components/FeaturesList";
+import GlobalContext from "../global-context";
 import otherLanguagesCourseText from "../text/courses/otherLanguagesCourseText";
 
 const OtherLanguagesPage = () => {
+  const { lang } = React.useContext(GlobalContext);
   const data = useStaticQuery(graphql`
     query OtherLanguagesImageQuery {
       bannerImage: file(base: { regex: "/193471265/" }) {
@@ -37,6 +40,9 @@ const OtherLanguagesPage = () => {
   `);
   return (
     <CoursesCommonLayout>
+      <Helmet>
+        <title>{otherLanguagesCourseText.bannerHeading[lang]}</title>
+      </Helmet>
       <CourseBanner
         bannerHeading={otherLanguagesCourseText.bannerHeading}
         bannerParagraphs={otherLanguagesCourseText.bannerParagraphs}

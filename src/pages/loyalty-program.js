@@ -1,5 +1,6 @@
 import { graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import styled from "styled-components";
 import AutumnSignUp from "../components/AutumnSignUp";
 import CourseBanner from "../components/CourseBanner";
@@ -60,6 +61,9 @@ const LoyaltyProgramPage = () => {
   `);
   return (
     <CoursesCommonLayout>
+      <Helmet>
+        <title>{loyaltyProgramText.bannerHeading[lang]}</title>
+      </Helmet>
       <CourseBanner
         bannerHeading={loyaltyProgramText.bannerHeading}
         bannerParagraphs={loyaltyProgramText.bannerParagraphs}

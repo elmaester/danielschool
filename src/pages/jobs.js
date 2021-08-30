@@ -12,6 +12,7 @@ import {
   pageTitle,
 } from "../text/jobsText";
 import { paddings, sizes } from "../responsive";
+import { Helmet } from "react-helmet";
 
 const JobsPageSC = styled.main`
   padding: ${paddings.phone}px;
@@ -42,6 +43,9 @@ const JobsPage = () => {
   const { lang } = React.useContext(GlobalContext);
   return (
     <GlobalStyle>
+      <Helmet>
+        <title>{pageTitle[lang]}</title>
+      </Helmet>
       <Header />
       <JobsPageSC>
         <PageTitleSC>{pageTitle[lang]}</PageTitleSC>

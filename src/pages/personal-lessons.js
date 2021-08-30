@@ -1,12 +1,15 @@
 import { graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import CourseBanner from "../components/CourseBanner";
 import CourseDescription from "../components/CourseDescription";
 import CoursesCommonLayout from "../components/CoursesCommonLayout";
 import FeaturesList from "../components/FeaturesList";
+import GlobalContext from "../global-context";
 import personalLessonsText from "../text/courses/personalLessonsText";
 
 const PersonalLessonsPage = () => {
+  const { lang } = React.useContext(GlobalContext);
   const data = useStaticQuery(graphql`
     query PersonalLessonsImageQuery {
       bannerImage: file(base: { regex: "/200546540/" }) {
@@ -37,6 +40,9 @@ const PersonalLessonsPage = () => {
   `);
   return (
     <CoursesCommonLayout>
+      <Helmet>
+        <title>{personalLessonsText.bannerHeading[lang]}</title>
+      </Helmet>
       <CourseBanner
         bannerHeading={personalLessonsText.bannerHeading}
         bannerParagraphs={personalLessonsText.bannerParagraphs}
