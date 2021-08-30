@@ -1,6 +1,6 @@
 require("dotenv").config({
   path: ".env",
-})
+});
 
 module.exports = {
   siteMetadata: {
@@ -12,19 +12,21 @@ module.exports = {
     "gatsby-plugin-gatsby-cloud",
     "gatsby-plugin-image",
     {
-      resolve: "gatsby-plugin-google-analytics",
+      resolve: "gatsby-plugin-google-gtag",
       options: {
-        trackingId: process.env.GATSBY_ANALYTICS,
+        trackingIds: [process.env.GATSBY_ANALYTICS],
+        pluginConfig: {
+          head: true,
+          respectDNT: false,
+        },
       },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `montserrat`,
-        ],
-        display: 'swap'
-      }
+        fonts: [`montserrat`],
+        display: "swap",
+      },
     },
     {
       resolve: `gatsby-plugin-manifest`,
@@ -33,7 +35,7 @@ module.exports = {
         short_name: `Daniel's School`,
         start_url: `/`,
         display: `standalone`,
-        icon: 'src/images/favicon.svg'
+        icon: "src/images/favicon.svg",
       },
     },
     "gatsby-plugin-react-svg",
