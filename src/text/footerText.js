@@ -98,12 +98,6 @@ export const navigation = [
   },
 ];
 
-export const privacy = {
-  uk: "Політика конфіденційності",
-  en: "Privacy Policy",
-  link: "privacy",
-};
-
 export const memo = {
   uk: "створена у пам’ять про нашого друга і наставника Деніела Хейдена",
   en: "has been created in memory of our friend and mentor Daniel Hayden",

@@ -76,19 +76,6 @@ const NavSectionSC = styled.div`
   }
 `;
 
-const PrivacyNotice = styled.div`
-  padding: 35px 0;
-  text-align: center;
-  border-top: 1px solid #222d3d;
-  a {
-    font-size: 14px;
-    color: #818181;
-    &:hover {
-      color: white;
-    }
-  }
-`;
-
 const SocialsMemo = styled.div`
   p {
     padding: 40px 35px;
@@ -171,9 +158,6 @@ const Footer = () => {
           </p>
         </SocialsMemo>
       </UpperPartSC>
-      <PrivacyNotice>
-        <Link to={"/" + privacy.link}>{privacy[lang]}</Link>
-      </PrivacyNotice>
     </FooterSC>
   );
 };
