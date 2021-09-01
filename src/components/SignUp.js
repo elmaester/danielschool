@@ -1,7 +1,6 @@
 import * as React from "react";
 import styled from "styled-components";
 import PhoneInput from "react-phone-input-2";
-import Multiselect from "multiselect-react-dropdown";
 import "./SignUp__InputStyles.css";
 import GlobalContext from "../global-context";
 import {
@@ -70,6 +69,12 @@ const FormInputSC = styled.input`
     font-size: 14px;
     line-height: 26px;
   }
+  option {
+    &:first-of-type {
+      display: none;
+    }
+    color: ${blackColor};
+  }
 `;
 
 const SendButtonSC = styled.button`
@@ -122,9 +127,6 @@ const SignUp = () => {
   const [clientName, setClientName] = React.useState("");
   const [number, setNumber] = React.useState("380");
   const [chosenLanguages, setChosenLanguages] = React.useState("");
-  const handleList = (list) => {
-    setChosenLanguages(list.map((item) => item.en).join(", "));
-  };
   const [formStatus, setFormStatus] = React.useState("initial");
   return (
     <SignUpSC {...convertToBgImage(data.file.childImageSharp.gatsbyImageData)}>
@@ -142,6 +144,7 @@ const SignUp = () => {
               handleFormSubmit(e, setFormStatus);
           }}
         >
+          <input name="gotcha" style={{ display: "none" }} />
           <FormInputSC
             type="text"
             placeholder={name[lang]}
@@ -150,28 +153,23 @@ const SignUp = () => {
             onChange={(e) => setClientName(e.target.value)}
             required={true}
           />
-          <input
+          <FormInputSC
+            as="select"
             name="languages"
-            style={{ display: "none" }}
+            required
+            style={{ marginTop: "30px" }}
             value={chosenLanguages}
-            onChange={() => {}}
-            required={true}
-          />
-          <input name="gotcha" style={{ display: "none" }} />
-          <Multiselect
-            options={languages}
-            displayValue={lang}
-            placeholder={languageChoice[lang]}
-            closeIcon="cancel"
-            closeOnSelect={false}
-            hidePlaceholder
-            onSelect={(selectedList) => {
-              handleList(selectedList);
-            }}
-            onRemove={(selectedList) => {
-              handleList(selectedList);
-            }}
-          />
+            onInput={(e) => setChosenLanguages(e.target.value)}
+          >
+            <option value="" disabled selected>
+              {languageChoice[lang]}
+            </option>
+            {languages.map((language) => (
+              <option value={language.en} key={language.en}>
+                {language[lang]}
+              </option>
+            ))}
+          </FormInputSC>
           <PhoneInput
             country="ua"
             disableDropdown

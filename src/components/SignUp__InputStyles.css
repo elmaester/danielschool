@@ -1,5 +1,4 @@
-.SignUp__PhoneInput__input,
-.multiSelectContainer {
+.SignUp__PhoneInput__input {
   display: block;
   width: 100%;
   border: 2px solid white;
@@ -10,29 +9,10 @@
   color: white;
   outline: none;
 }
-.SignUp__PhoneInput__input::placeholder,
-.multiSelectContainer input::placeholder {
+.SignUp__PhoneInput__input::placeholder {
   color: white;
   font-size: 14px;
   line-height: 26px;
-}
-.multiSelectContainer .searchWrapper {
-  border: none;
-  padding: 0;
-}
-.multiSelectContainer .chip {
-  background-color: transparent;
-  border: 1px solid white;
-}
-.multiSelectContainer li {
-  color: #040e1f;
-  background-color: white;
-}
-.multiSelectContainer li:hover {
-  background-color: #2b5adc !important;
-}
-.multiSelectContainer .searchBox {
-  color: white;
 }
 .SignUp__PhoneInput__container .special-label {
   display: none;

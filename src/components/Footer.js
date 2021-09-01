@@ -1,7 +1,7 @@
 import * as React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-import { memo, navigation, privacy } from "../text/footerText";
+import { memo, navigation } from "../text/footerText";
 import { sizes, paddings, blackColor } from "../responsive";
 import GlobalContext from "../global-context";
 import FacebookIcon from "../images/facebook.svg";

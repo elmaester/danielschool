@@ -47,6 +47,6 @@ export const signUpAutumn = {
 };
 
 export const thankYouMessage = {
-  uk: "Дякуємо! Вашу заявку прийнято, і ми незабаром зв'яжемось з Вами! ",
+  uk: "Дякуємо! Вашу заявку прийнято і ми незабаром зв'яжемось з Вами! ",
   en: "Thank you! Your application has been received and we will get in touch soon!",
 };
