@@ -9,6 +9,7 @@ const MenuSC = styled.nav`
   position: fixed;
   z-index: 101;
   width: 100%;
+  box-sizing: border-box;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px ${paddings.phone}px;
   ${sizes.tabletLandscape} {
@@ -31,6 +32,10 @@ const InnerContainer = styled.div`
     justify-content: space-between;
   }
   ${sizes.desktop} {
+    width: 85%;
+    margin-left: auto;
+  }
+  ${sizes.desktopWide} {
     width: 75%;
     margin-left: auto;
   }

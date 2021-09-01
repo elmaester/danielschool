@@ -161,7 +161,7 @@ const SignUp = () => {
             value={chosenLanguages}
             onInput={(e) => setChosenLanguages(e.target.value)}
           >
-            <option value="" disabled selected>
+            <option value="" disabled>
               {languageChoice[lang]}
             </option>
             {languages.map((language) => (
