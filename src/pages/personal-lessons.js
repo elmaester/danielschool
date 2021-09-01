@@ -5,11 +5,9 @@ import CourseBanner from "../components/CourseBanner";
 import CourseDescription from "../components/CourseDescription";
 import CoursesCommonLayout from "../components/CoursesCommonLayout";
 import FeaturesList from "../components/FeaturesList";
-import GlobalContext from "../global-context";
 import personalLessonsText from "../text/courses/personalLessonsText";
 
 const PersonalLessonsPage = () => {
-  const { lang } = React.useContext(GlobalContext);
   const data = useStaticQuery(graphql`
     query PersonalLessonsImageQuery {
       bannerImage: file(base: { regex: "/200546540/" }) {
@@ -41,7 +39,11 @@ const PersonalLessonsPage = () => {
   return (
     <CoursesCommonLayout>
       <Helmet>
-        <title>{personalLessonsText.bannerHeading[lang]}</title>
+        <title>індивідуальні уроки англійської мови у Чернівцях</title>
+        <meta
+          name="description"
+          content="Англійська мова індивідульно для дорослих та дітей. Дипломовані викладачі. Сформуйте індивідуальний графік занять!"
+        />
       </Helmet>
       <CourseBanner
         bannerHeading={personalLessonsText.bannerHeading}

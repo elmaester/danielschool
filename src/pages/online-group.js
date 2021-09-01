@@ -5,11 +5,9 @@ import CourseBanner from "../components/CourseBanner";
 import CourseDescription from "../components/CourseDescription";
 import CoursesCommonLayout from "../components/CoursesCommonLayout";
 import FeaturesList from "../components/FeaturesList";
-import GlobalContext from "../global-context";
 import onlineCourseText from "../text/courses/onlineCourseText";
 
 const OlineGroupPage = () => {
-  const { lang } = React.useContext(GlobalContext);
   const data = useStaticQuery(graphql`
     query OlineGroupImageQuery {
       bannerImage: file(base: { regex: "/1075401647/" }) {
@@ -41,7 +39,11 @@ const OlineGroupPage = () => {
   return (
     <CoursesCommonLayout>
       <Helmet>
-        <title>{onlineCourseText.bannerHeading[lang]}</title>
+        <title>онлайн курс вихідного дня з англійської мови</title>
+        <meta
+          name="description"
+          content="Курс англійської мови на вихідні. Онлайн формат. Для тих, у кого не вистачає часу на вивчення англійської мови у будні"
+        />
       </Helmet>
       <CourseBanner
         bannerHeading={onlineCourseText.bannerHeading}

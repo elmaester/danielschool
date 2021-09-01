@@ -1,8 +1,6 @@
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import styled, { createGlobalStyle } from "styled-components";
-import GlobalContext from "../global-context";
-import { motto } from "../text/carouselItemsText";
 
 const GlobalStyleSC = createGlobalStyle`
 html, body, div, span, applet, object, iframe,
@@ -59,24 +57,16 @@ h2 {
 }
 `;
 
-const learnEnglish = {
-  uk: "Вивчайте англійську мову",
-  en: "Learn English",
-}
-
-const GlobalStyle = ({ children }) => {
-  const { lang } = React.useContext(GlobalContext);
-  return (
-    <>
-      <Helmet
-        defaultTitle={`Daniel's School - ${motto.partOne[lang]}${motto.partTwo[lang]} | ${learnEnglish[lang]}`}
-        titleTemplate={`%s | Daniel's School - ${motto.partOne[lang]}${motto.partTwo[lang]} | ${learnEnglish[lang]}`}
-      ></Helmet>
-      <GlobalStyleSC />
-      {children}
-    </>
-  );
-};
+const GlobalStyle = ({ children }) => (
+  <>
+    <Helmet
+      defaultTitle={`Daniel's School`}
+      titleTemplate={`Daniel's School - %s`}
+    ></Helmet>
+    <GlobalStyleSC />
+    {children}
+  </>
+);
 
 export default GlobalStyle;
 

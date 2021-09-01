@@ -5,11 +5,9 @@ import CourseBanner from "../components/CourseBanner";
 import CourseDescription from "../components/CourseDescription";
 import CoursesCommonLayout from "../components/CoursesCommonLayout";
 import FeaturesList from "../components/FeaturesList";
-import GlobalContext from "../global-context";
 import kidsCourseText from "../text/courses/kidsCourseText";
 
 const KidsGroupPage = () => {
-  const { lang } = React.useContext(GlobalContext);
   const data = useStaticQuery(graphql`
     query KidsGroupImageQuery {
       bannerImage: file(base: { regex: "/1447101821/" }) {
@@ -41,7 +39,11 @@ const KidsGroupPage = () => {
   return (
     <CoursesCommonLayout>
       <Helmet>
-        <title>{kidsCourseText.bannerHeading[lang]}</title>
+        <title>англійська для дітей у Чернівцях</title>
+        <meta
+          name="description"
+          content="Daniel’s School - англійська для дітей у Чернівцях. Практика спілкування з носіями мови. Веселі, креативні та ефективні заняття у групах до 8 дітей"
+        />
       </Helmet>
       <CourseBanner
         bannerHeading={kidsCourseText.bannerHeading}

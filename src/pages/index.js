@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Helmet } from "react-helmet";
 import AboutUs from "../components/AboutUs";
 import AutumnSignUp from "../components/AutumnSignUp";
 import BannerCarousel from "../components/BannerCarousel";
@@ -13,6 +14,13 @@ import SignUp from "../components/SignUp";
 
 const IndexPage = () => (
   <GlobalStyle>
+    <Helmet>
+      <title>школа іноземних мов у Чернівцях</title>
+      <meta
+        name="description"
+        content="Daniel’s School - курси іноземних мов у Чернівцях. Гнучкі ціни та графік. Англійська з американцями. Запишись на осінній курс! Групи та індивідуально. В офісі (центр міста) / онлайн."
+      />
+    </Helmet>
     <Header />
     <BannerCarousel />
     <Reasons />
