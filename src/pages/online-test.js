@@ -11,6 +11,7 @@ import { blueColor, paddings, sizes } from "../responsive";
 import {
   confirmButtonText,
   getScore,
+  incompleteWarningText,
   questions,
   verdictMessage,
 } from "../text/onlineTestText";
@@ -75,12 +76,26 @@ const VerdictSC = styled.div`
   }
 `;
 
+const GetScoreContainerSC = styled.div`
+  align-items: center;
+  display: flex;
+`;
+
+const IncompleteWarningSC = styled.div`
+  margin-left: 20px;
+  color: red;
+`;
+
 const OnlineTestPage = () => {
   const { lang } = React.useContext(GlobalContext);
   const [userAnswersObj, setUserAnswersObj] = React.useState({});
   const [verdict, setVerdict] = React.useState();
+  const [incompleteWarning, setIncompleteWarning] = React.useState("");
   const submitForm = () => {
-    if (Object.entries(userAnswersObj).length < 25) return null;
+    if (Object.entries(userAnswersObj).length < 25) {
+      setIncompleteWarning(incompleteWarningText[lang]);
+      return null;
+    }
     const correctAnswers = questions.map((question) => {
       if (question.hasOwnProperty("correctIndex")) {
         return question.correctIndex;
@@ -114,7 +129,7 @@ const OnlineTestPage = () => {
           submitForm();
         }}
       >
-      <PageTitleSC>Online Test</PageTitleSC>
+        <PageTitleSC>Online Test</PageTitleSC>
         {questions.map((question, questionIndex) => (
           <QuestionSC key={questionIndex}>
             {questionIndex === 10 && (
@@ -134,7 +149,6 @@ const OnlineTestPage = () => {
                       type="radio"
                       name={`q${questionIndex}`}
                       id={`q${questionIndex}a1`}
-                      required
                       onInput={() =>
                         setUserAnswersObj({
                           ...userAnswersObj,
@@ -151,7 +165,6 @@ const OnlineTestPage = () => {
                       type="radio"
                       name={`q${questionIndex}`}
                       id={`q${questionIndex}a2`}
-                      required
                       onInput={() =>
                         setUserAnswersObj({
                           ...userAnswersObj,
@@ -172,7 +185,6 @@ const OnlineTestPage = () => {
                       type="radio"
                       name={`q${questionIndex}`}
                       id={`q${questionIndex}a${answerIndex}`}
-                      required
                       onInput={() =>
                         setUserAnswersObj({
                           ...userAnswersObj,
@@ -192,12 +204,15 @@ const OnlineTestPage = () => {
         {!!verdict ? (
           <VerdictSC>{verdict}</VerdictSC>
         ) : (
-          <SignUpButtonSC type="submit">
-            {confirmButtonText[lang]}
-          </SignUpButtonSC>
+          <GetScoreContainerSC>
+            <SignUpButtonSC type="submit">
+              {confirmButtonText[lang]}
+            </SignUpButtonSC>
+            {!!incompleteWarning && (
+              <IncompleteWarningSC>{incompleteWarning}</IncompleteWarningSC>
+            )}
+          </GetScoreContainerSC>
         )}
-        {/* <VerdictSC>{verdict}</VerdictSC>
-        <SignUpButtonSC type="submit">{confirmButtonText[lang]}</SignUpButtonSC> */}
       </OnlineTestSC>
       <SignUp />
       <Footer />

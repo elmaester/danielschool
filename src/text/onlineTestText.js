@@ -216,3 +216,8 @@ export const confirmButtonText = {
     uk: "Отримайте свій результат",
     en: "Get your result"
 }
+
+export const incompleteWarningText = {
+  uk: "Ви повинні відповісти на всі 25 питань. Будь ласка, уважно перевірте, здається ви щось пропустили",
+  en: "You must answer all 25 questions. Please double check carefully, looks like you've missed some"
+}
