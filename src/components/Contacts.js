@@ -3,7 +3,7 @@ import styled from "styled-components";
 import GoogleMapReact from "google-map-react";
 import GlobalContext from "../global-context";
 import MapPin from "../images/map-pin.svg";
-import { paddings, sizes } from "../responsive";
+import { blackColor, grayColor, paddings, sizes } from "../responsive";
 import {
   heading,
   location,
@@ -56,6 +56,16 @@ const MapPinSC = styled.div`
   height: 48px;
   width: 48px;
   transform: translate(-50%, -95%);
+  div {
+    padding: 3px;
+    color: ${blackColor};
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    display: none;
+  }
+  &:hover div {
+    display: block;
+  }
 `;
 
 const MapContainerSC = styled.div`
@@ -106,9 +116,19 @@ const Contacts = ({ showEmail }) => {
           defaultCenter={schoolCoords}
           defaultZoom={17}
         >
-          <MapPinSC {...schoolCoords}>
+          <MapPinSC {...schoolCoords} style={{ position: "relative" }}>
             <MapPin />
+            <div
+              style={{
+                position: "absolute",
+                top: "90%",
+                right: "-20%",
+              }}
+            >
+              Daniel's School
+            </div>
           </MapPinSC>
+          <div>bla</div>
         </GoogleMapReact>
       </MapContainerSC>
     </ContactsSC>

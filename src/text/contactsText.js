@@ -6,7 +6,7 @@ export const heading = {
 export const location = [
   {
     uk: "Кімната 108,",
-    en: "Apt. 108,",
+    en: "Room 108,",
   },
   {
     uk: "1 поверх,",
