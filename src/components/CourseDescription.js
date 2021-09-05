@@ -34,6 +34,8 @@ const BelowTitleContainer = styled.div`
 `;
 
 const ParagraphsContainer = styled.div`
+  white-space: pre-wrap;
+  line-height: 20px;
   p:not(:first-of-type) {
     margin-top: 10px;
   }

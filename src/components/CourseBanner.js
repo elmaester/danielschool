@@ -39,6 +39,10 @@ const CourseBannerSC = styled(BackgroundImage)`
     }
   }
   p {
+    :not(:first-of-type) {
+      margin-top: 10px;
+    }
+    white-space: pre-wrap;
     line-height: 26px;
     text-shadow: 0.2px 0.2px ${blackColor};
     ${sizes.desktop} {

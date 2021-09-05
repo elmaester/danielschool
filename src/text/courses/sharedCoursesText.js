@@ -47,3 +47,8 @@ export const paymentPerLesson = {
   uk: "Вартість за урок",
   en: "Cost per lesson",
 };
+
+export const studySchedule = {
+  uk: "Розклад занять",
+  en: "Study schedule",
+};

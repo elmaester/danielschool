@@ -7,49 +7,35 @@ import {
   nativeSpeakers,
   payment,
   speakingClubs,
+  studySchedule,
 } from "./sharedCoursesText";
+
+const sharedParagraphs = [
+    {
+      uk: "Максимум спілкування і практики!",
+      en: "Lots of speaking practice!",
+    },
+    {
+      uk: "Це саме те, що потрібно, коли мета навчання - вільно розмовляти англійською! Ми фокусуємось на розмовній практиці англійської з носіями мови з США та Британії.",
+      en: "Just what you need to achieve English speaking fluency! We focus on English speaking practice with native speakers from the USA and the UK.",
+    },
+    {
+      uk: "Курс триває 4 місяці, в групах від 4-х до 8-ми людей, за який досягається певний рівень мови. Графік занять - фіксований, навчання проходить у приміщенні школи тричі на тиждень. Після кожного рівня (курсу) за результатами складається тест і отримується локальний сертифікат Daniel’s school.",
+      en: "A 4-months-long course, taken in groups of 4 to 8 people, to help you achieve some proficiency in the language. Fixed schedule, classes occur 3 times per week on the school's premises. After completing each level (course) you take a test and receive the Daniel's School local certificate.",
+    },
+    {
+      uk: "Наступний курс на вищий рівень надається вже зі знижкою 5%.",
+      en: "The next higher level course is provided with a 5% discount.",
+    },
+];
 
 const adultsCourseText = {
   bannerHeading: {
     uk: "Групові заняття для дорослих",
     en: "Group classes for adults",
   },
-  bannerParagraphs: [
-    {
-      uk: "Групові заняття фокусуються на розмовній практиці англійської з носіями мови з США та Британії.",
-      en: "Group classes focus on English speaking practice with native speakers from the USA and the UK.",
-    },
-    {
-      uk: "Максимум спілкування і практики!",
-      en: "Lots of speaking practice!",
-    },
-    {
-      uk: "Це саме те, що потрібно, коли мета навчання - вільно розмовляти англійською!",
-      en: "Just what you need to achieve English speaking fluency!",
-    },
-  ],
-  descriptionParagraphs: [
-    {
-      uk: "Курс навчання 4 місяці, за який досягається певний рівень мови.",
-      en: "A 4-months-long course to help you achieve some proficiency in the language.",
-    },
-    {
-      uk: "Під час занять є практика з носіями мови. ",
-      en: "You practice with native speakers during the lessons.",
-    },
-    {
-      uk: "Графік занять - фіксований.",
-      en: "Fixed schedule.",
-    },
-    {
-      uk: "Після кожного рівня - ви складаєте тест та отримаєте сертифікат Daniel’s School.",
-      en: "After completing each level you take a test and receive the Daniel's School certificate.",
-    },
-    {
-      uk: "Наступний курс на вищий рівень надається вже зі знижкою 5%.",
-      en: "The next higher level course is provided with a 5% discount.",
-    },
-  ],
+  bannerParagraphs: sharedParagraphs,
+  descriptionParagraphs: sharedParagraphs,
   featuresList: [
     {
       title: certifiedTeachers,
@@ -90,9 +76,18 @@ const adultsCourseText = {
       sublines: [monthlyPayment],
     },
     {
+      title: studySchedule,
+      sublines: [
+        {
+          uk: "Понеділок/Середа/П’ятниця або Вівторок/Четвер/Субота",
+          en: "Monday/Wednesday/Friday or Tuesday/Thursday/Saturday",
+        },
+      ],
+    },
+    {
       title: {
-        uk: "Денний курс",
-        en: "Daytime course",
+        uk: "Денний курс тричі на тиждень",
+        en: "Daytime course 3 times per week",
       },
       sublines: [
         {
@@ -107,8 +102,8 @@ const adultsCourseText = {
     },
     {
       title: {
-        uk: "Вечірній курс",
-        en: "Evening course",
+        uk: "Вечірній курс тричі на тиждень",
+        en: "Evening course 3 times per week",
       },
       sublines: [
         {

@@ -52,6 +52,11 @@ export const navigation = [
     },
     items: [
       {
+        uk: "Індивідуальні уроки",
+        en: "Personal lessons",
+        link: "personal-lessons",
+      },
+      {
         uk: "Іспанська",
         en: "Spanish",
         link: "other-languages",

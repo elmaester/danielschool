@@ -2,7 +2,6 @@ import { graphql, useStaticQuery } from "gatsby";
 import * as React from "react";
 import { Helmet } from "react-helmet";
 import styled from "styled-components";
-import AutumnSignUp from "../components/AutumnSignUp";
 import CourseBanner from "../components/CourseBanner";
 import CoursesCommonLayout from "../components/CoursesCommonLayout";
 import { CircleSC } from "../components/Reason";
@@ -77,7 +76,6 @@ const LoyaltyProgramPage = () => {
           </DiscountItemSC>
         ))}
       </DiscountDetailsSC>
-      <AutumnSignUp />
     </CoursesCommonLayout>
   );
 };
