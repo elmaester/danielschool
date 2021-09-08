@@ -55,12 +55,12 @@ const personalLessonsText = {
       },
       sublines: [
         {
-          uk: "200 грн за урок (1 особа)",
-          en: "200 UAH per lesson (1 person)",
+          uk: "180 грн за урок (1 особа)",
+          en: "180 UAH per lesson (1 person)",
         },
         {
-          uk: "360 грн за урок (2 особи)",
-          en: "360 UAH per lesson (2 persons)",
+          uk: "320 грн за урок (2 особи)",
+          en: "320 UAH per lesson (2 persons)",
         },
         {
           uk: "450 грн за урок (3 особи)",
@@ -75,16 +75,16 @@ const personalLessonsText = {
       },
       sublines: [
         {
-          uk: "250 грн за урок (1 особа)",
-          en: "250 UAH per lesson (1 person)",
+          uk: "220 грн за урок (1 особа)",
+          en: "220 UAH per lesson (1 person)",
         },
         {
-          uk: "440 грн за урок (2 особи)",
-          en: "440 UAH per lesson (2 persons)",
+          uk: "400 грн за урок (2 особи)",
+          en: "400 UAH per lesson (2 persons)",
         },
         {
-          uk: "660 грн за урок (3 особи)",
-          en: "660 UAH per lesson (3 persons)",
+          uk: "540 грн за урок (3 особи)",
+          en: "540 UAH per lesson (3 persons)",
         },
       ],
     },

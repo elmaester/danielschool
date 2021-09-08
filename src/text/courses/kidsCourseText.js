@@ -65,8 +65,8 @@ Three times per week on Mondays, Wednesdays and Fridays
       title: paymentPerLesson,
       sublines: [
         {
-          uk: "100 грн",
-          en: "100 UAH",
+          uk: "80 грн",
+          en: "80 UAH",
         },
       ],
     },

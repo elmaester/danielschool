@@ -57,8 +57,8 @@ const otherLanguagesCourseText = {
       title: paymentPerLesson,
       sublines: [
         {
-          uk: "150 грн",
-          en: "150 UAH",
+          uk: "120 грн",
+          en: "120 UAH",
         },
       ],
     },

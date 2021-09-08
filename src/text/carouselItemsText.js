@@ -9,10 +9,7 @@ export const items = [
       uk: "Індивідуальні та групові заняття для дорослих",
       en: "Personal and group classes for adults",
     },
-    subtext: {
-      uk: "Професійні викладачі та носії мови з США та Британії",
-      en: "Professional teachers and native speakers from the USA and the UK",
-    },
+    subtext: sharedText,
     imageID: "637186963",
     link: "adults-group",
   },
