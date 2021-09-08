@@ -8,7 +8,13 @@ import {
   studySchedule,
 } from "./sharedCoursesText";
 
-const sharedParagraphs = [
+const kidsCourseText = {
+  bannerHeading: {
+    uk: "Групові заняття для школярів 8-12 років",
+    en: "Group classes for school students aged 8-12",
+  },
+  bannerParagraphs: [],
+  descriptionParagraphs: [
   {
     uk: "Навчання відбувається в класах впродовж року на постійній основі і, при цьому, діти також спілкуються з носіями мови та проходять проміжні тести. Групи формуються за віком та рівнем знання мови від 4-х до 8-ми дітей.",
     en: "Kids study on premises throughout the academic year on a regular basis, communicate with native speakers and take milestone tests. Groups of 4 to 8 kids are assembled based on age and language proficiency.",
@@ -29,15 +35,7 @@ Twice per week on Tuesdays and Thursdays
 Three times per week on Mondays, Wednesdays and Fridays
 3:30pm - 4:45pm, 13 classes per month`,
   },
-];
-
-const kidsCourseText = {
-  bannerHeading: {
-    uk: "Групові заняття для школярів 8-12 років",
-    en: "Group classes for school students aged 8-12",
-  },
-  bannerParagraphs: sharedParagraphs,
-  descriptionParagraphs: sharedParagraphs,
+],
   featuresList: [
     {
       title: certifiedTeachers,

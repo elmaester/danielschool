@@ -1,27 +1,25 @@
 import { courseDuration, lessonDuration, payment } from "./sharedCoursesText";
 
-const sharedParagraphs = [
-  {
-    uk: "Навчання one-on-one з нашими кваліфікованими викладачами англійської, іспанської, польської, французької мов, як в приміщенні школи, так і в on-line форматі. Гнучкість індивідуального навчання дозволить ефективно спланувати свій час, оскільки розклад уроків узгоджується індивідуально для кожного клієнта.",
-    en: "Learn one-on-one from our certified teachers of English, Spanish, Polish and French - on our premises or online. Plan your time more efficiently by negotiating a schedule based on your personal needs.",
-  },
-  {
-    uk: "Також, є можливість займатись в парі або втрьох, ціна індивідуального уроку, при цьому, зменшується.",
-    en: "Also you can choose to study in pairs or 3-person groups, in which case the cost of the lessons decreases.",
-  },
-  {
-    uk: "При оплаті за 5 і більше індивідуальних уроків наперед надається знижка.",
-    en: "Get a discount when you pay for 5 or more personal lessons in advance.",
-  },
-];
-
 const personalLessonsText = {
   bannerHeading: {
     uk: "Індивідуальні уроки",
     en: "Personal lessons",
   },
-  bannerParagraphs: sharedParagraphs,
-  descriptionParagraphs: sharedParagraphs,
+  bannerParagraphs: [],
+  descriptionParagraphs: [
+    {
+      uk: "Навчання one-on-one з нашими кваліфікованими викладачами англійської, іспанської, польської, французької мов, як в приміщенні школи, так і в on-line форматі. Гнучкість індивідуального навчання дозволить ефективно спланувати свій час, оскільки розклад уроків узгоджується індивідуально для кожного клієнта.",
+      en: "Learn one-on-one from our certified teachers of English, Spanish, Polish and French - on our premises or online. Plan your time more efficiently by negotiating a schedule based on your personal needs.",
+    },
+    {
+      uk: "Також, є можливість займатись в парі або втрьох, ціна індивідуального уроку, при цьому, зменшується.",
+      en: "Also you can choose to study in pairs or 3-person groups, in which case the cost of the lessons decreases.",
+    },
+    {
+      uk: "При оплаті за 5 і більше індивідуальних уроків наперед надається знижка.",
+      en: "Get a discount when you pay for 5 or more personal lessons in advance.",
+    },
+  ],
   featuresList: [
     {
       title: courseDuration,

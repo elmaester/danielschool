@@ -1,3 +1,8 @@
+const sharedText = {
+  uk: "Осінній набір в групи розпочато! Перше заняття - безкоштовне!",
+  en: "Signup for autumn groups is in progress! First lesson is free!",
+};
+
 export const items = [
   {
     heading: {
@@ -9,43 +14,34 @@ export const items = [
       en: "Professional teachers and native speakers from the USA and the UK",
     },
     imageID: "637186963",
-    link: "adults-group"
+    link: "adults-group",
   },
   {
     heading: {
       uk: "Індивідуальні та групові заняття для школярів",
       en: "Personal and group classes for school students",
     },
-    subtext: {
-      uk: "Групи від 4 до 8 дітей",
-      en: "4 to 8 kids per group",
-    },
+    subtext: sharedText,
     imageID: "1448137991",
-    link: "kids-group"
+    link: "kids-group",
   },
   {
     heading: {
       uk: "Курс вихідного дня ONLINE",
       en: "ONLINE weekend course",
     },
-    subtext: {
-      uk: "Групи від 4 до 8 людей",
-      en: "4 to 8 students per group",
-    },
+    subtext: sharedText,
     imageID: "308787692",
-    link: "online-group"
+    link: "online-group",
   },
   {
     heading: {
       uk: "Курси вивчення іспанської, французької, польської, румунської мов",
       en: "Spanish, French, Polish and Romanian classes",
     },
-    subtext: {
-      uk: "Групи від 4 до 8 людей",
-      en: "4 to 8 students per group",
-    },
+    subtext: sharedText,
     imageID: "1186037383",
-    link: "other-languages"
+    link: "other-languages",
   },
 ];
 

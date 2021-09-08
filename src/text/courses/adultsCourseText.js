@@ -10,7 +10,13 @@ import {
   studySchedule,
 } from "./sharedCoursesText";
 
-const sharedParagraphs = [
+const adultsCourseText = {
+  bannerHeading: {
+    uk: "Групові заняття для дорослих",
+    en: "Group classes for adults",
+  },
+  bannerParagraphs: [],
+  descriptionParagraphs: [
     {
       uk: "Максимум спілкування і практики!",
       en: "Lots of speaking practice!",
@@ -27,15 +33,7 @@ const sharedParagraphs = [
       uk: "Наступний курс на вищий рівень надається вже зі знижкою 5%.",
       en: "The next higher level course is provided with a 5% discount.",
     },
-];
-
-const adultsCourseText = {
-  bannerHeading: {
-    uk: "Групові заняття для дорослих",
-    en: "Group classes for adults",
-  },
-  bannerParagraphs: sharedParagraphs,
-  descriptionParagraphs: sharedParagraphs,
+  ],
   featuresList: [
     {
       title: certifiedTeachers,
