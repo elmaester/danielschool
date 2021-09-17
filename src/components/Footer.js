@@ -134,7 +134,7 @@ const Footer = () => {
         <SocialsMemo>
           <SocialsContainerSC>
             <OutboundLink
-              href="https://www.facebook.com/profile.php?id=100072396455464"
+              href="https://www.facebook.com/danielsschool1"
               target="_blank"
               rel="noopener"
             >
