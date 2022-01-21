@@ -1,6 +1,6 @@
 const sharedText = {
-  uk: "Осінній набір в групи розпочато! Перше заняття - безкоштовне!",
-  en: "Signup for autumn groups is in progress! First lesson is free!",
+  uk: "Набір в групи на постійній основі!",
+  en: "Signup for groups is in progress!",
 };
 
 export const items = [
