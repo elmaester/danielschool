@@ -60,8 +60,8 @@ const adultsCourseText = {
       title: lessonDuration,
       sublines: [
         {
-          uk: "1,45 год., тричі на тиждень",
-          en: "1.45 hours, 3 times per week",
+          uk: "1,45 год., двічі на тиждень",
+          en: "1.45 hours, 2 times per week",
         },
       ],
     },
@@ -84,8 +84,8 @@ const adultsCourseText = {
     },
     {
       title: {
-        uk: "Денний курс тричі на тиждень",
-        en: "Daytime course 3 times per week",
+        uk: "Денний курс двічі на тиждень",
+        en: "Daytime course 2 times per week",
       },
       sublines: [
         {
@@ -100,8 +100,8 @@ const adultsCourseText = {
     },
     {
       title: {
-        uk: "Вечірній курс тричі на тиждень",
-        en: "Evening course 3 times per week",
+        uk: "Вечірній курс двічі на тиждень",
+        en: "Evening course 2 times per week",
       },
       sublines: [
         {
