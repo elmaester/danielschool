@@ -24,10 +24,10 @@ const otherLanguagesCourseText = {
     en: "Lessons include varied listening tasks and a condensed introduction to grammar to help with understanding of texts and speech.",
   },
   {
-    uk: `Розклад занять Вівторок Четвер Субота
-17:00 – 18:45 або 19:00 – 20:45, 13 уроків в місяць`,
-    en: `Schedule: Tuesday, Thursday, Saturday
-5pm - 6:45pm or 7pm - 7:45pm, 13 classes per month`,
+    uk: `Розклад занять Понеділок Середа П’ятниця 
+17:00 – 18:00 або 18:30 – 19:30, 12 уроків в місяць`,
+    en: `Schedule: Monday, Wednesday, Friday 
+5pm - 6pm or 6:30pm - 7:30pm, 12 classes per month`,
   },
 ],
   featuresList: [
@@ -48,8 +48,8 @@ const otherLanguagesCourseText = {
       title: lessonDuration,
       sublines: [
         {
-          uk: "1,45 год.",
-          en: "1.45 hours",
+          uk: "1 год.",
+          en: "1 hour",
         },
       ],
     },
@@ -57,8 +57,8 @@ const otherLanguagesCourseText = {
       title: paymentPerLesson,
       sublines: [
         {
-          uk: "120 грн",
-          en: "120 UAH",
+          uk: "125 грн",
+          en: "125 UAH",
         },
       ],
     },
@@ -69,8 +69,8 @@ const otherLanguagesCourseText = {
       },
       sublines: [
         {
-          uk: "Вівторок/Четвер/Субота",
-          en: "Tuesday, Thursday, Saturday",
+          uk: "Понеділок/Середа/П’ятниця",
+          en: "Monday, Wednesday, Friday",
         },
       ],
     },
@@ -81,8 +81,8 @@ const otherLanguagesCourseText = {
       },
       sublines: [
         {
-          uk: "в будні 17:00-18:45 або 19:00-20:45",
-          en: "5pm - 6:45pm or 7pm - 8:45pm on week days",
+          uk: "в будні 17:00-18:00 або 18:30-19:30",
+          en: "5pm - 6pm or 6:30pm - 7:30pm on week days",
         },
         {
           uk: "в Суботу в першій половині дня",
