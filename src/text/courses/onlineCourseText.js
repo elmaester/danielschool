@@ -23,10 +23,10 @@ const onlineCourseText = {
     {
       uk: `Розклад занять
 Субота Неділя 
-10:00 - 12:15, 8 уроків в місяць`,
+10:00 - 11:30, 8 уроків в місяць`,
       en: `Study schedule
 Saturday, Sunday
-10am - 12:15pm, 8 classes per month`,
+10am - 11:30am, 8 classes per month`,
     },
   ],
   featuresList: [
@@ -55,8 +55,8 @@ Saturday, Sunday
       title: lessonDuration,
       sublines: [
         {
-          uk: "2,15 год.",
-          en: "2.15 hours",
+          uk: "1,30 год.",
+          en: "1.30 hour",
         },
       ],
     },
@@ -87,12 +87,12 @@ Saturday, Sunday
       },
       sublines: [
         {
-          uk: "1300/міс",
-          en: "1300/month",
+          uk: "1500/міс",
+          en: "1500/month",
         },
         {
-          uk: "(10:00 - 12:15)",
-          en: "10am - 12:15pm",
+          uk: "(10:00 - 11:30)",
+          en: "10am - 11:30am",
         },
       ],
     },
