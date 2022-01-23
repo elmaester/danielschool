@@ -77,8 +77,8 @@ const adultsCourseText = {
       title: studySchedule,
       sublines: [
         {
-          uk: "Понеділок/Середа/П’ятниця або Вівторок/Четвер/Субота",
-          en: "Monday/Wednesday/Friday or Tuesday/Thursday/Saturday",
+          uk: "День через день",
+          en: "Day after day",
         },
       ],
     },
