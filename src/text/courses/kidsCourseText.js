@@ -21,18 +21,18 @@ const kidsCourseText = {
   },
   {
     uk: `${studySchedule.uk} для молодших
-Двічі на тиждень Понеділок Середа 
+Двічі на тиждень Пн, Ср або Вт, Чт 
 15:30 – 16:45, 8 уроків в місяць`,
     en: `${studySchedule.en} for juniors
-Twice per week on Mondays and Wednesdays
+Twice per week on Mon and Wed or Tues and Thurs
 3:30pm - 4:45pm, 8 classes per month`,
   },
   {
     uk: `${studySchedule.uk} для старших
-Двічі або тричі на тиждень Понеділок Середа П’ятниця
+Двічі або тричі на тиждень Вт, Чт або Пн, Ср, Пт
 16:30 – 17:45, 8 або 12 уроків в місяць`,
     en: `${studySchedule.en} for seniors
-Two or three times per week on Mondays, Wednesdays and Fridays
+Two or three times per week on Tues, Thurs or Mon, Wed, Fri
 4:30pm - 5:45pm, 8 or 12 classes per month`,
   },
 ],
@@ -72,15 +72,15 @@ Two or three times per week on Mondays, Wednesdays and Fridays
     },
     {
       title: {
-        uk: "Двічі або тричі на тиждень Вівторок Четвер для молодших",
-        en: "Twice or thrice per week on Tuesdays and Thursdays for juniors",
+        uk: "Двічі на тиждень Вт, Чт або Пн, Ср, для молодших",
+        en: "Twice per week on Tues, Thurs or Mon, Wed for juniors",
       },
       sublines: [],
     },
     {
       title: {
-        uk: "Двічі або тричі на тиждень Понеділок Середа П’ятниця для старших",
-        en: "Two or three times per week on Mondays, Wednesdays and Fridays for seniors",
+        uk: "Двічі або тричі на тиждень Вт, Чт або Пн, Ср, Пт для старших",
+        en: "Two or three times per week on Tues, Thurs or Mon, Wed, Fri for seniors",
       },
       sublines: [],
     },
