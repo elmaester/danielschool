@@ -10,8 +10,8 @@ import {
 
 const kidsCourseText = {
   bannerHeading: {
-    uk: "Групові заняття для школярів 8-12 років",
-    en: "Group classes for school students aged 8-12",
+    uk: "Групові заняття для школярів 6-15 років",
+    en: "Group classes for school students aged 6-15",
   },
   bannerParagraphs: [],
   descriptionParagraphs: [
@@ -21,19 +21,19 @@ const kidsCourseText = {
   },
   {
     uk: `${studySchedule.uk} для молодших
-Двічі на тиждень Вівторок Четвер
+Двічі на тиждень Понеділок Середа 
 15:30 – 16:45, 8 уроків в місяць`,
     en: `${studySchedule.en} for juniors
-Twice per week on Tuesdays and Thursdays
+Twice per week on Mondays and Wednesdays
 3:30pm - 4:45pm, 8 classes per month`,
   },
   {
     uk: `${studySchedule.uk} для старших
-Тричі на тиждень Понеділок Середа П’ятниця
-15:30 – 16:45, 13 уроків в місяць`,
+Двічі або тричі на тиждень Понеділок Середа П’ятниця
+16:30 – 17:45, 8 або 12 уроків в місяць`,
     en: `${studySchedule.en} for seniors
-Three times per week on Mondays, Wednesdays and Fridays
-3:30pm - 4:45pm, 13 classes per month`,
+Two or three times per week on Mondays, Wednesdays and Fridays
+4:30pm - 5:45pm, 8 or 12 classes per month`,
   },
 ],
   featuresList: [
@@ -56,8 +56,8 @@ Three times per week on Mondays, Wednesdays and Fridays
       title: lessonDuration,
       sublines: [
         {
-          uk: "1,15 год. (15:30 - 16:45)",
-          en: "1.15 hours, (3:30pm - 4:45pm)",
+          uk: "1,15 год. (15:30 - 16:45/16:30 - 17:45)",
+          en: "1.15 hours, (3:30pm - 4:45pm/4:30pm - 5:45pm)",
         },
       ],
     },
@@ -72,15 +72,15 @@ Three times per week on Mondays, Wednesdays and Fridays
     },
     {
       title: {
-        uk: "Двічі на тиждень Вівторок Четвер для молодших",
-        en: "Twice per week on Tuesdays and Thursdays for juniors",
+        uk: "Двічі або тричі на тиждень Вівторок Четвер для молодших",
+        en: "Twice or thrice per week on Tuesdays and Thursdays for juniors",
       },
       sublines: [],
     },
     {
       title: {
-        uk: "Тричі на тиждень Понеділок Середа П’ятниця для старших",
-        en: "Three times per week on Mondays, Wednesdays and Fridays for seniors",
+        uk: "Двічі або тричі на тиждень Понеділок Середа П’ятниця для старших",
+        en: "Two or three times per week on Mondays, Wednesdays and Fridays for seniors",
       },
       sublines: [],
     },
