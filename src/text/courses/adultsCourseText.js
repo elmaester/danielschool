@@ -26,8 +26,8 @@ const adultsCourseText = {
       en: "Just what you need to achieve English speaking fluency! We focus on English speaking practice with native speakers from the USA and the UK.",
     },
     {
-      uk: "Курс триває 4 місяці, в групах від 4-х до 8-ми людей, за який досягається певний рівень мови. Графік занять - фіксований, навчання проходить у приміщенні школи тричі на тиждень. Після кожного рівня (курсу) за результатами складається тест і отримується локальний сертифікат Daniel’s school.",
-      en: "A 4-months-long course, taken in groups of 4 to 8 people, to help you achieve some proficiency in the language. Fixed schedule, classes occur 3 times per week on the school's premises. After completing each level (course) you take a test and receive the Daniel's School local certificate.",
+      uk: "Курс триває 4 місяці, в групах від 4-х до 8-ми людей, за який досягається певний рівень мови. Графік занять - фіксований, навчання проходить у приміщенні школи двічі-тричі на тиждень. Після кожного рівня (курсу) за результатами складається тест і отримується локальний сертифікат Daniel’s school.",
+      en: "A 4-months-long course, taken in groups of 4 to 8 people, to help you achieve some proficiency in the language. Fixed schedule, classes occur 2-3 times per week on the school's premises. After completing each level (course) you take a test and receive the Daniel's School local certificate.",
     },
     {
       uk: "Наступний курс на вищий рівень надається вже зі знижкою 5%.",
@@ -60,8 +60,8 @@ const adultsCourseText = {
       title: lessonDuration,
       sublines: [
         {
-          uk: "1,45 год., двічі на тиждень",
-          en: "1.45 hours, 2 times per week",
+          uk: "1,30 год., двічі на тиждень",
+          en: "1.30 hours, 2 times per week",
         },
       ],
     },
@@ -93,8 +93,8 @@ const adultsCourseText = {
           en: "1400/month",
         },
         {
-          uk: "(10:00-11:45/12:00-13:45)",
-          en: "(10am-11:45am/12pm-1:45pm)",
+          uk: "(10:00-11:30/12:00-13:30)",
+          en: "(10am-11:30am/12pm-1:30pm)",
         },
       ],
     },
@@ -109,8 +109,8 @@ const adultsCourseText = {
           en: "1500/month",
         },
         {
-          uk: "(17:00-18:45/19:00-20:45)",
-          en: "(5pm-6:45pm/7pm-8:45pm)",
+          uk: "(17:00-18:30/18:30-20:00)",
+          en: "(5pm-6:30pm/6:30pm-8pm)",
         },
       ],
     },
