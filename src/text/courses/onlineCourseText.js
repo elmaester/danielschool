@@ -87,8 +87,8 @@ Saturday, Sunday
       },
       sublines: [
         {
-          uk: "1500/міс",
-          en: "1500/month",
+          uk: "1800/міс",
+          en: "1800/month",
         },
         {
           uk: "(10:00 - 11:30)",
