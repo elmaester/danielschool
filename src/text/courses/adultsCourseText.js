@@ -89,8 +89,8 @@ const adultsCourseText = {
       },
       sublines: [
         {
-          uk: "1400/міс",
-          en: "1400/month",
+          uk: "1800/міс",
+          en: "1800/month",
         },
         {
           uk: "(10:00-11:30/12:00-13:30)",
@@ -105,8 +105,8 @@ const adultsCourseText = {
       },
       sublines: [
         {
-          uk: "1500/міс",
-          en: "1500/month",
+          uk: "2000/міс",
+          en: "2000/month",
         },
         {
           uk: "(17:00-18:30/18:30-20:00)",
