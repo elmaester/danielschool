@@ -16,8 +16,8 @@ const personalLessonsText = {
       en: "Also you can choose to study in pairs or 3-person groups, in which case the cost of the lessons decreases.",
     },
     {
-      uk: "При оплаті за 5 і більше індивідуальних уроків наперед надається знижка.",
-      en: "Get a discount when you pay for 5 or more personal lessons in advance.",
+      uk: "При оплаті за 8 і більше індивідуальних уроків наперед надається знижка.",
+      en: "Get a discount when you pay for 8 or more personal lessons in advance.",
     },
   ],
   featuresList: [
@@ -55,16 +55,16 @@ const personalLessonsText = {
       },
       sublines: [
         {
-          uk: "180 грн за урок (1 особа)",
-          en: "180 UAH per lesson (1 person)",
+          uk: "250 грн за урок (1 особа)",
+          en: "250 UAH per lesson (1 person)",
         },
         {
-          uk: "320 грн за урок (2 особи)",
-          en: "320 UAH per lesson (2 persons)",
+          uk: "480 грн за урок (2 особи)",
+          en: "480 UAH per lesson (2 persons)",
         },
         {
-          uk: "450 грн за урок (3 особи)",
-          en: "450 UAH per lesson (3 persons)",
+          uk: "660 грн за урок (3 особи)",
+          en: "660 UAH per lesson (3 persons)",
         },
       ],
     },
@@ -75,16 +75,16 @@ const personalLessonsText = {
       },
       sublines: [
         {
-          uk: "220 грн за урок (1 особа)",
-          en: "220 UAH per lesson (1 person)",
+          uk: "300 грн за урок (1 особа)",
+          en: "300 UAH per lesson (1 person)",
         },
         {
-          uk: "400 грн за урок (2 особи)",
-          en: "400 UAH per lesson (2 persons)",
+          uk: "580 грн за урок (2 особи)",
+          en: "580 UAH per lesson (2 persons)",
         },
         {
-          uk: "540 грн за урок (3 особи)",
-          en: "540 UAH per lesson (3 persons)",
+          uk: "810 грн за урок (3 особи)",
+          en: "810 UAH per lesson (3 persons)",
         },
       ],
     },
@@ -95,8 +95,8 @@ const personalLessonsText = {
       },
       sublines: [
         {
-          uk: "при оплаті за 5 уроків наперед знижка 50 грн",
-          en: "50 UAH discount when you pay for 5 lessons in advance",
+          uk: "при оплаті за 8 уроків наперед знижка 50 грн",
+          en: "50 UAH discount when you pay for 8 lessons in advance",
         },
         {
           uk: "при оплаті за 10 уроків наперед знижка 100 грн",
